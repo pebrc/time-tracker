@@ -1,0 +1,736 @@
+PM ASL data store: /var/log/powermanagement
+
+Time stamp                Domain              	Message                                                                    	Duration  	Delay     
+==========                ======              	=======                                                                    	========  	=====     
+UUID: DF4475A1-453C-40C2-92C5-9E3912010D4E
+2016-06-01 01:41:49 +0200 Kernel Client Acks  	Delays to Sleep notifications: [powerd is slow(28143 ms)] [AppleThunderboltNHIType2 driver is slow(msg: WillChangeState to 2)(362 ms)] [AppleAHCIDiskQueueManager driver is slow(msg: SetState to 0)(304 ms)] [RP03 driver is slow(msg: SetState to 0)(1270 ms)]           
+2016-06-01 01:41:49 +0200 Assertions          	PID 103(mDNSResponder) Created MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd00000aeb [System: DeclUser kDisp]          
+2016-06-01 01:41:49 +0200 Assertions          	PID 103(mDNSResponder) Released MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd00000aeb [System: DeclUser kDisp]          
+2016-06-01 01:41:49 +0200 DarkWake            	DarkWake from Deep Idle [CDN] due to EC.SleepTimer/SleepTimer: Using BATT (Charge:100%) 0 secs    
+2016-06-01 01:41:49 +0200 HibernateStats      	hibmode=3 standbydelay=10800                                               	          rd=222 ms 	
+2016-06-01 01:41:49 +0200 Kernel Client Acks  	Delays to Wake notifications: [SS03 driver is slow(msg: SetState to 3)(402 ms)] [AppleAHCIDiskQueueManager driver is slow(msg: SetState to 3)(361 ms)]           
+2016-06-01 01:41:49 +0200 Sleep               	Entering Sleep state due to 'Maintenance Sleep': Using Batt (Charge:100%) 15275 secs
+2016-06-01 01:41:50 +0200 PM Client Acks      	Delays to Sleep notifications: [AirPort configd plug-in is slow(847 ms)]           
+2016-06-01 05:56:18 +0200 Kernel Client Acks  	Delays to Sleep notifications: [com_apple_driver_AppleUSBCardReaderDriverNub driver is slow(msg: SetState to 2)(1193 ms)] [RP03 driver is slow(msg: SetState to 0)(1273 ms)] [XHC1 driver is slow(msg: SetState to 0)(310 ms)]           
+2016-06-01 05:56:18 +0200 Assertions          	Kernel Idle sleep preventers: IODisplayWrangler          
+2016-06-01 05:56:18 +0200 Notification        	Display is turned on                                                       	          
+2016-06-01 05:56:18 +0200 Assertions          	PID 103(mDNSResponder) Created MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd00000af2 [System: DeclUser kDisp]          
+2016-06-01 05:56:19 +0200 Assertions          	PID 103(mDNSResponder) Released MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd00000af2 [System: DeclUser kDisp]          
+2016-06-01 05:56:24 +0200 Wake                	Wake from Standby [CDNVA] due to EC.LidOpen/Lid Open: Using BATT (Charge:100%) 3286 secs 
+2016-06-01 05:56:24 +0200 HibernateStats      	hibmode=3 standbydelay=10800                                               	          rd=223 ms 	
+2016-06-01 05:56:24 +0200 Kernel Client Acks  	Delays to Wake notifications: [AppleIntelFramebuffer driver is slow(msg: SetState to 2)(439 ms)] [SS03 driver is slow(msg: SetState to 3)(405 ms)] [com_apple_driver_AppleUSBCardReaderDriverNub driver is slow(msg: SetState to 2)(1058 ms)]           
+2016-06-01 06:13:47 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000b40 [System: PrevIdle PrevDisp DeclUser kDisp]          
+2016-06-01 06:13:50 +0200 Assertions          	PID 62(powerd) TurnedOn InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:00:00  id:0x0x1000000269 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:13:50 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:02  id:0x0x500000b40 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:15:03 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000b46 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:15:05 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:02  id:0x0x500000b46 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:15:06 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000b47 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:15:11 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:04  id:0x0x500000b47 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:15:14 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000b48 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:15:14 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000b48 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:15:32 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000b49 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:15:38 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:06  id:0x0x500000b49 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:17:38 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:03:48  id:0x0x1000000269 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:22:13 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000b53 [System: PrevDisp DeclUser kDisp]          
+2016-06-01 06:22:15 +0200 Assertions          	PID 62(powerd) TurnedOn InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:00:00  id:0x0x1000000269 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:22:15 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:02  id:0x0x500000b53 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:23:57 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000b59 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:24:15 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:02:00  id:0x0x1000000269 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:25:17 +0200 Assertions          	PID 62(powerd) TurnedOn InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:00:00  id:0x0x1000000269 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:25:17 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:01:20  id:0x0x500000b59 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:25:17 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:01:20  id:0x0x100000b31 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:25:19 +0200 Assertions          	PID 3495(Google Chrome) Released NoIdleSleepAssertion "Playing audio" 00:01:05  id:0x0x100000b5a [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:27:17 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:02:00  id:0x0x1000000269 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:40:20 +0200 Assertions          	PID 3495(Google Chrome) Released NoIdleSleepAssertion "WebRTC has active PeerConnections" 00:06:07  id:0x0x100000b7f [System: DeclUser kDisp]          
+2016-06-01 06:41:25 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000b91 [System: PrevIdle PrevDisp DeclUser kDisp]          
+2016-06-01 06:41:45 +0200 Assertions          	PID 62(powerd) TurnedOn InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:00:00  id:0x0x1000000269 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:41:45 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:20  id:0x0x500000b91 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:41:52 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000b92 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:42:15 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:23  id:0x0x500000b92 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:42:19 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000b93 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:42:42 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:23  id:0x0x500000b93 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:42:46 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000b94 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:43:06 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:20  id:0x0x500000b94 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:43:13 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000b95 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:43:33 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:20  id:0x0x500000b95 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:43:40 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000b96 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:44:00 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:20  id:0x0x500000b96 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:44:07 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000b97 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:44:27 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:20  id:0x0x500000b97 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:44:34 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000b98 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:44:54 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:20  id:0x0x500000b98 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:45:01 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000b99 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:45:16 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:14  id:0x0x500000b99 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:45:16 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:02:49  id:0x0x100000b31 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:45:16 +0200 Assertions          	PID 3495(Google Chrome) Released NoIdleSleepAssertion "WebRTC has active PeerConnections" 00:04:04  id:0x0x100000b90 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 06:47:16 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:05:31  id:0x0x1000000269 [System: DeclUser IntPrevDisp kDisp]          
+Sleep/Wakes since boot:66   Dark Wake Count in this sleep cycle:1
+
+Time stamp                Domain              	Message                                                                    	Duration  	Delay     
+==========                ======              	=======                                                                    	========  	=====     
+UUID: F83A7B86-4C68-4CFB-8BB1-F617DC2FF853
+2016-06-01 06:50:55 +0200 Notification        	Display is turned off                                                      	          
+2016-06-01 06:50:55 +0200 Assertions          	PID 111(hidd) Summary UserIsActive "com.apple.iohideventsystem.queue.tickle" 08:34:34  id:0x0x900000a43 [System: DeclUser kDisp]          
+2016-06-01 06:50:55 +0200 Assertions          	Kernel Idle sleep preventers: -None-          
+2016-06-01 06:50:55 +0200 Assertions          	PID 62(powerd) Created InternalPreventSleep "com.apple.powermanagement.darkwakelinger" 00:00:00  id:0x0xd00000baa [System: DeclUser SRPrevSleep kCPU kDisp]          
+2016-06-01 06:51:10 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventSleep "com.apple.powermanagement.darkwakelinger" 00:00:15  id:0x0xd00000baa [System: DeclUser SRPrevSleep kCPU kDisp]          
+2016-06-01 06:51:10 +0200 Sleep               	Entering Sleep state due to 'Clamshell Sleep': Using Batt (Charge:88%) 10805 secs
+2016-06-01 06:51:13 +0200 PM Client Acks      	Delays to Sleep notifications: [com.apple.apsd is slow(3131 ms)]           
+2016-06-01 09:51:15 +0200 Kernel Client Acks  	Delays to Sleep notifications: [powerd is slow(3134 ms)] [AppleThunderboltNHIType2 driver is slow(msg: WillChangeState to 2)(363 ms)] [AppleAHCIDiskQueueManager driver is slow(msg: SetState to 0)(306 ms)] [RP03 driver is slow(msg: SetState to 0)(1276 ms)]           
+2016-06-01 09:51:15 +0200 Assertions          	PID 103(mDNSResponder) Created MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd00000bbf [System: DeclUser kDisp]          
+2016-06-01 09:51:15 +0200 Assertions          	PID 103(mDNSResponder) Released MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd00000bbf [System: DeclUser kDisp]          
+2016-06-01 09:51:15 +0200 DarkWake            	DarkWake from Deep Idle [CDN] due to EC.SleepTimer/SleepTimer: Using BATT (Charge:86%) 0 secs    
+2016-06-01 09:51:15 +0200 HibernateStats      	hibmode=3 standbydelay=10800                                               	          rd=223 ms 	
+2016-06-01 09:51:15 +0200 Kernel Client Acks  	Delays to Wake notifications: [SS03 driver is slow(msg: SetState to 3)(402 ms)] [AppleAHCIDiskQueueManager driver is slow(msg: SetState to 3)(316 ms)]           
+2016-06-01 09:51:15 +0200 Sleep               	Entering Sleep state due to 'Maintenance Sleep': Using Batt (Charge:86%) 37501 secs
+2016-06-01 09:51:34 +0200 Assertions          	PID 88(apsd) Released InteractivePushServiceTask "com.apple.apsd-wakeconnection-push.apple.com" 00:00:19  id:0x0x1200000bc2 [System: DeclUser kDisp]          
+2016-06-01 09:51:43 +0200 PM Client Acks      	Delays to Sleep notifications: [com.apple.apsd timed out(28000 ms)]           
+2016-06-01 20:16:10 +0200 Kernel Client Acks  	Delays to Sleep notifications: [com_apple_driver_AppleUSBCardReaderDriverNub driver is slow(msg: SetState to 2)(933 ms)] [powerd is slow(28002 ms)] [AppleThunderboltNHIType2 driver is slow(msg: WillChangeState to 2)(360 ms)] [RP03 driver is slow(msg: SetState to 0)(1272 ms)] [AppleUSBMultitouchDriver driver is slow(msg: SetState to 4)(327 ms)] [XHC1 driver is slow(msg: SetState to 0)(301 ms)] [AppleIntelFramebuffer driver is slow(msg: SetState to 2)(408 ms)]           
+2016-06-01 20:16:10 +0200 Assertions          	Kernel Idle sleep preventers: IODisplayWrangler          
+2016-06-01 20:16:10 +0200 Notification        	Display is turned on                                                       	          
+2016-06-01 20:16:10 +0200 Assertions          	PID 103(mDNSResponder) Created MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd00000bc5 [System: DeclUser kDisp]          
+2016-06-01 20:16:10 +0200 Assertions          	PID 103(mDNSResponder) Released MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd00000bc5 [System: DeclUser kDisp]          
+2016-06-01 20:16:16 +0200 Wake                	Wake from Standby [CDNVA] due to EC.LidOpen/Lid Open: Using BATT (Charge:86%) 2097 secs 
+2016-06-01 20:16:16 +0200 HibernateStats      	hibmode=3 standbydelay=10800                                               	          rd=235 ms 	
+2016-06-01 20:16:16 +0200 Kernel Client Acks  	Delays to Wake notifications: [SS03 driver is slow(msg: SetState to 3)(404 ms)] [com_apple_driver_AppleUSBCardReaderDriverNub driver is slow(msg: SetState to 2)(962 ms)]           
+2016-06-01 20:31:21 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:01:34  id:0x0x100000b31 [System: DeclUser kDisp]          
+2016-06-01 20:32:24 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000c20 [System: PrevIdle PrevDisp DeclUser kDisp]          
+2016-06-01 20:32:36 +0200 Assertions          	PID 62(powerd) TurnedOn InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:00:00  id:0x0x1000000269 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 20:32:36 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:12  id:0x0x500000c20 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 20:34:36 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:02:00  id:0x0x1000000269 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 20:35:03 +0200 Assertions          	PID 4149(iTunes) Released PreventUserIdleSystemSleep "com.apple.iTunes.common" 00:01:15  id:0x0x100000c28 [System: DeclUser kDisp]          
+2016-06-01 20:49:58 +0200 Assertions          	PID 111(hidd) TimedOut UserIsActive "com.apple.iohideventsystem.queue.tickle" 22:33:37  id:0x0x900000a43 [System: DeclUser kDisp]          
+2016-06-01 20:49:58 +0200                     	Summary- [System: No Assertions] Using Batt(Charge: 79)                    	          
+2016-06-01 20:49:59 +0200 Notification        	Display is turned off                                                      	          
+2016-06-01 20:50:13 +0200 Assertions          	Kernel Idle sleep preventers: -None-          
+2016-06-01 20:50:43 +0200 Assertions          	PID 62(powerd) Created InternalPreventSleep "com.apple.powermanagement.darkwakelinger" 00:00:00  id:0x0xd00000c62 [System: SRPrevSleep kCPU]          
+2016-06-01 20:50:58 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventSleep "com.apple.powermanagement.darkwakelinger" 00:00:15  id:0x0xd00000c62 [System: SRPrevSleep kCPU]          
+Sleep/Wakes since boot:68   Dark Wake Count in this sleep cycle:1
+
+Time stamp                Domain              	Message                                                                    	Duration  	Delay     
+==========                ======              	=======                                                                    	========  	=====     
+UUID: 533B8C0B-619A-490C-A66C-3F320EB9941F
+2016-06-01 20:51:13 +0200 Sleep               	Entering Sleep state due to 'Idle Sleep': Using Batt (Charge:79%)           
+2016-06-01 20:51:16 +0200 PM Client Acks      	Delays to Sleep notifications: [com.apple.apsd is slow(3064 ms)]           
+2016-06-01 21:04:53 +0200 Kernel Client Acks  	Delays to Sleep notifications: [powerd is slow(3068 ms)] [AppleThunderboltNHIType2 driver is slow(msg: WillChangeState to 2)(359 ms)] [AppleAHCIDiskQueueManager driver is slow(msg: SetState to 0)(303 ms)] [RP03 driver is slow(msg: SetState to 0)(1267 ms)]           
+2016-06-01 21:04:53 +0200 Assertions          	PID 103(mDNSResponder) Created MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd00000c78 [System: No Assertions]          
+2016-06-01 21:04:53 +0200                     	Summary- [System: SRPrevSleep kCPU] Using AC(Charge: 78)                   	          
+2016-06-01 21:04:53 +0200 Assertions          	PID 103(mDNSResponder) Released MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd00000c78 [System: PrevIdle]          
+2016-06-01 21:04:53 +0200 Assertions          	PID 62(powerd) Created InternalPreventSleep "PM configd - Wait for Device enumeration" 00:00:00  id:0x0xd00000c7e [System: PrevIdle SRPrevSleep kCPU]          
+2016-06-01 21:04:53 +0200 com.apple.sleepservices.sessionStarted	SleepService: window begins with cap time=86400 secs                       	          
+2016-06-01 21:04:53 +0200 DarkWake            	DarkWake from Deep Idle [CDNP] due to EC.ACAttach/Maintenance: Using AC (Charge:78%) 37 secs   
+2016-06-01 21:04:53 +0200 HibernateStats      	hibmode=3 standbydelay=10800                                               	          rd=235 ms 	
+2016-06-01 21:04:53 +0200 Kernel Client Acks  	Delays to Wake notifications: [SS03 driver is slow(msg: SetState to 3)(403 ms)]           
+2016-06-01 21:04:53 +0200 Assertions          	PID 62(powerd) Created InternalPreventSleep "com.apple.powermanagement.acwakelinger" 00:00:00  id:0x0xd00000c80 [System: PrevIdle PushSrvc SRPrevSleep kCPU]          
+2016-06-01 21:04:59 +0200 Assertions          	PID 62(powerd) Released InternalPreventSleep "PM configd - Wait for Device enumeration" 00:00:05  id:0x0xd00000c7e [System: PrevIdle PushSrvc SRPrevSleep kCPU]          
+2016-06-01 21:05:03 +0200 Assertions          	PID 62(powerd) TimedOut ApplePushServiceTask "Powerd - Wait for client pushService assertions" 00:00:10  id:0x0xa00000c7f [System: PrevIdle PushSrvc SRPrevSleep kCPU]          
+2016-06-01 21:05:03 +0200 com.apple.sleepservices.sessionTerminated	SleepService: window has terminated.                                       	          
+2016-06-01 21:05:30 +0200 Assertions          	Kernel Idle sleep preventers: IODisplayWrangler          
+2016-06-01 21:05:30 +0200 Notification        	Display is turned on                                                       	          
+2016-06-01 21:05:30 +0200 Wake                	DarkWake to FullWake from Deep Idle [CDNVA] due to HID Activity: Using AC (Charge:79%)           
+2016-06-01 21:05:30 +0200 HibernateStats      	hibmode=3 standbydelay=10800                                               	          rd=235 ms 	
+2016-06-01 21:05:30 +0200 Kernel Client Acks  	Delays to Wake notifications: [AppleIntelFramebuffer driver is slow(msg: SetState to 2)(337 ms)] [AppleIntelFramebuffer driver is slow(msg: WillChangeState to 2)(337 ms)]           
+2016-06-01 21:05:32 +0200 Assertions          	PID 111(hidd) Created UserIsActive "com.apple.iohideventsystem.queue.tickle" 00:00:00  id:0x0x900000ca2 [System: PrevIdle DeclUser SRPrevSleep IPushSrvc kCPU kDisp]          
+2016-06-01 21:05:38 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventSleep "com.apple.powermanagement.acwakelinger" 00:00:45  id:0x0xd00000c80 [System: PrevIdle DeclUser SRPrevSleep kCPU kDisp]          
+2016-06-01 21:05:38 +0200                     	Summary- [System: PrevIdle DeclUser kDisp] Using AC(Charge: 79)            	          
+2016-06-01 21:05:58 +0200 Assertions          	PID 307(UserEventAgent) TimedOut PreventUserIdleSystemSleep "CDSystemMonitor: delay notifications on switch to AC power" 00:01:05  id:0x0x100000c79 [System: PrevIdle DeclUser kDisp]          
+2016-06-01 21:05:58 +0200 Assertions          	PID 51(UserEventAgent) TimedOut PreventUserIdleSystemSleep "CDSystemMonitor: delay notifications on switch to AC power" 00:01:05  id:0x0x100000c7a [System: PrevIdle DeclUser kDisp]          
+2016-06-01 21:08:42 +0200 Assertions          	PID 12478(softwareupdate_notify_agent) Released BackgroundTask "com.apple.softwareupdate.NotifyAgentAssertion" 00:02:16  id:0x0xb00000cd2 [System: DeclUser kDisp]          
+2016-06-01 21:10:50 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000cf3 [System: PrevDisp DeclUser kDisp]          
+2016-06-01 21:10:52 +0200 Assertions          	PID 62(powerd) TurnedOn InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:00:00  id:0x0x1000000269 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:10:52 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:01  id:0x0x500000cf3 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:10:54 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000cf4 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:11:11 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:17  id:0x0x500000cf4 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:11:14 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000cf6 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:11:21 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:07  id:0x0x500000cf6 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:11:23 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000cf7 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:11:39 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:15  id:0x0x500000cf7 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:11:42 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000cfa [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:01 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000cfa [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:02 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000cfc [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:21 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000cfc [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:22 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000cfd [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:38 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:16  id:0x0x500000cfd [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:38 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000cff [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:43 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:05  id:0x0x500000cff [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:44 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d00 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:44 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d00 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:46 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d01 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:46 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d01 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:46 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d02 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:48 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:01  id:0x0x500000d02 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:48 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d03 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:49 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d03 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:49 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d04 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:49 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d04 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:49 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d05 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:50 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d05 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:50 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d06 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:50 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d06 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:50 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d07 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:50 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d07 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:50 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d08 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:52 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:01  id:0x0x500000d08 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:52 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d09 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:53 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d09 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:53 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d0a [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:54 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d0a [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:54 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d0b [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:54 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d0b [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:54 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d0c [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:56 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:01  id:0x0x500000d0c [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:56 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d0d [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:56 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d0d [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:12:56 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d0e [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:13:14 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:17  id:0x0x500000d0e [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:13:14 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d17 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:13:34 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000d17 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:13:34 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d19 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:13:44 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:10  id:0x0x500000d19 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:13:44 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d1a [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:13:48 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:03  id:0x0x500000d1a [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:13:48 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d1c [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:13:53 +0200 Assertions          	PID 4116(rcd) Created UserIsActive "com.apple.rcdevent" 00:00:00  id:0x0x900000d1d [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:14:08 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000d1c [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:14:08 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d1f [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:14:28 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000d1f [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:14:28 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d26 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:14:48 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000d26 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:14:48 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d29 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:15:08 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000d29 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:15:08 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d2a [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:15:28 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000d2a [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:15:28 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d2c [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:15:30 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:02  id:0x0x500000d2c [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:15:30 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d2d [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:15:30 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:01:43  id:0x0x100000b31 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:15:43 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:12  id:0x0x500000d2d [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:15:43 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d2f [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:16:02 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000d2f [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:16:02 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d31 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:16:16 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:13  id:0x0x500000d31 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:16:16 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d34 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:16:36 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000d34 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:16:36 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d36 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:16:42 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:06  id:0x0x500000d36 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:16:42 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d37 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:16:50 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:07  id:0x0x500000d37 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:16:50 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d39 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:17:10 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000d39 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:17:10 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d3e [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:17:30 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000d3e [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:17:30 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d46 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:17:50 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000d46 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:17:50 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d4a [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:18:10 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000d4a [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:18:10 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d4b [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:18:30 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000d4b [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:18:30 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d4d [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:18:50 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000d4d [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:18:50 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d53 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:19:10 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000d53 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:19:10 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d55 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:19:30 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000d55 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:19:30 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d56 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:19:50 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000d56 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:19:50 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d59 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:20:10 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000d59 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:20:10 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d5a [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:20:24 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:13  id:0x0x500000d5a [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:20:24 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d5c [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:20:24 +0200 Assertions          	PID 3495(Google Chrome) Released NoIdleSleepAssertion "Playing audio" 00:03:36  id:0x0x100000d38 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:20:24 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:03:36  id:0x0x100000b31 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:22:47 +0200 Assertions          	PID 3495(Google Chrome) Released NoIdleSleepAssertion "Playing audio" 00:02:19  id:0x0x100000d5d [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:23:53 +0200 Assertions          	PID 4116(rcd) TimedOut UserIsActive "com.apple.rcdevent" 00:09:59  id:0x0x900000d1d [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:24:06 +0200 Assertions          	PID 3495(Google Chrome) Released NoIdleSleepAssertion "Playing audio" 00:01:18  id:0x0x100000d63 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:24:39 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:04:12  id:0x0x100000b31 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:25:14 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:04:50  id:0x0x500000d5c [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:25:26 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d72 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:25:28 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:01  id:0x0x500000d72 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:25:28 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d75 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:25:49 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:20  id:0x0x500000d75 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:25:49 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d78 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:25:56 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:07  id:0x0x500000d78 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:25:59 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d7a [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:26:10 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:10  id:0x0x500000d7a [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:26:14 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d7d [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:26:36 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:22  id:0x0x500000d7d [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:26:39 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d80 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:26:45 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:06  id:0x0x500000d80 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:26:47 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d81 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:27:00 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:13  id:0x0x500000d81 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:27:00 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d83 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:27:19 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000d83 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:27:19 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d88 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:27:21 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:01  id:0x0x500000d88 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:27:21 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d89 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:27:55 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:33  id:0x0x500000d89 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:27:58 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d90 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:28:12 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:13  id:0x0x500000d90 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:28:12 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d92 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:28:42 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:29  id:0x0x500000d92 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:28:42 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d95 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:29:03 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:21  id:0x0x500000d95 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:29:05 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d97 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:29:11 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:05  id:0x0x500000d97 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:29:13 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d99 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:29:15 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:02  id:0x0x500000d99 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:29:19 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d9a [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:30:18 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:59  id:0x0x500000d9a [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:30:20 +0200 Assertions          	PID 3495(Google Chrome) Released NoIdleSleepAssertion "Playing audio" 00:01:00  id:0x0x100000d9b [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:30:20 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000d9e [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:30:37 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:16  id:0x0x500000d9e [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:30:42 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000da0 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:30:56 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:14  id:0x0x500000da0 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:30:59 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000da1 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:31:19 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000da1 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:31:19 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000da4 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:31:23 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:04  id:0x0x500000da4 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:31:23 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000da5 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:33:50 +0200 Assertions          	PID 3495(Google Chrome) Released NoIdleSleepAssertion "Playing audio" 00:01:43  id:0x0x100000dae [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:33:50 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:02:26  id:0x0x500000da5 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:33:50 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000db6 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:33:58 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:02:32  id:0x0x100000b31 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:33:58 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:08  id:0x0x500000db6 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:33:58 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000db7 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:33:59 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000db7 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:33:59 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000db8 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:33:59 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000db8 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:33:59 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000db9 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:34:00 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000db9 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:34:00 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000dba [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:34:00 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000dba [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:34:00 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000dbb [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:34:01 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000dbb [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:34:01 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000dbc [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:34:01 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000dbc [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:34:01 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000dbd [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:34:01 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000dbd [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:34:01 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000dbe [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:34:02 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000dbe [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:34:02 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000dbf [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:34:02 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000dbf [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:34:02 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000dc0 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:34:02 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000dc0 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:37:38 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000dd2 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:38:27 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:48  id:0x0x500000dd2 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:38:37 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:01:04  id:0x0x100000b31 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:43:27 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:32:35  id:0x0x1000000269 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 21:48:47 +0200 Assertions          	PID 4149(iTunes) Released PreventUserIdleSystemSleep "com.apple.iTunes.common" 00:01:15  id:0x0x100000df9 [System: DeclUser kDisp]          
+2016-06-01 22:32:11 +0200 Assertions          	PID 3495(Google Chrome) Released NoIdleSleepAssertion "Playing audio" 00:05:21  id:0x0x100000f10 [System: PrevIdle DeclUser kDisp]          
+2016-06-01 22:32:11 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:05:21  id:0x0x100000b31 [System: DeclUser kDisp]          
+2016-06-01 22:32:24 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000f2b [System: PrevIdle PrevDisp DeclUser kDisp]          
+2016-06-01 22:36:52 +0200 Assertions          	PID 62(powerd) TurnedOn InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:00:00  id:0x0x1000000269 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 22:36:52 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:04:28  id:0x0x500000f2b [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 22:36:52 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:04:28  id:0x0x100000b31 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 22:36:54 +0200 Assertions          	PID 3495(Google Chrome) Released NoIdleSleepAssertion "Playing audio" 00:04:30  id:0x0x100000f2c [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 22:37:05 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000f47 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 22:37:12 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:06  id:0x0x500000f47 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 22:37:12 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000f4b [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 22:38:12 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:01:00  id:0x0x500000f4b [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 22:38:15 +0200 Assertions          	PID 3495(Google Chrome) Released NoIdleSleepAssertion "Playing audio" 00:01:09  id:0x0x100000f48 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 22:38:22 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:01:10  id:0x0x100000b31 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 22:43:12 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:06:20  id:0x0x1000000269 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 22:48:22 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000f75 [System: PrevDisp DeclUser kDisp]          
+2016-06-01 22:48:45 +0200 Assertions          	PID 4116(rcd) Created UserIsActive "com.apple.rcdevent" 00:00:00  id:0x0x900000f7d [System: PrevIdle PrevDisp DeclUser kDisp]          
+2016-06-01 22:58:45 +0200 Assertions          	PID 4116(rcd) TimedOut UserIsActive "com.apple.rcdevent" 00:09:59  id:0x0x900000f7d [System: PrevIdle PrevDisp DeclUser kDisp]          
+2016-06-01 23:04:24 +0200 Assertions          	PID 62(powerd) TurnedOn InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:00:00  id:0x0x1000000269 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:04:24 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:16:02  id:0x0x500000f75 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:04:26 +0200 Assertions          	PID 3495(Google Chrome) Released NoIdleSleepAssertion "Playing audio" 00:16:04  id:0x0x100000f76 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:04:35 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:16:12  id:0x0x100000b31 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:04:35 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000fb8 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:04:38 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:02  id:0x0x500000fb8 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:05:01 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000fbe [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:05:07 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:06  id:0x0x500000fbe [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:05:07 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000fc0 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:07:31 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:02:23  id:0x0x500000fc0 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:07:32 +0200 Assertions          	PID 3495(Google Chrome) Released NoIdleSleepAssertion "Playing audio" 00:02:31  id:0x0x100000fbf [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:07:36 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:02:28  id:0x0x100000b31 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:08:29 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000fd5 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:08:48 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:19  id:0x0x500000fd5 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:09:11 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000fdb [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:09:18 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:06  id:0x0x500000fdb [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:09:34 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000fde [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:10:49 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:01:15  id:0x0x500000fde [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:11:19 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000fe7 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:11:20 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:01  id:0x0x500000fe7 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:11:23 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000fe8 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:11:37 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:14  id:0x0x500000fe8 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:11:58 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000feb [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:14:28 +0200 Assertions          	PID 3495(Google Chrome) Released NoIdleSleepAssertion "Playing audio" 00:04:54  id:0x0x100000fdf [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:14:36 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:02:37  id:0x0x500000feb [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:14:46 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:05:12  id:0x0x100000b31 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:16:47 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500000ff9 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:18:13 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:01:25  id:0x0x500000ff9 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:18:13 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:01:26  id:0x0x100000b31 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:18:15 +0200 Assertions          	PID 3495(Google Chrome) Released NoIdleSleepAssertion "Playing audio" 00:01:27  id:0x0x100000ffc [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:18:24 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500001006 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:18:46 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:21  id:0x0x500001006 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:18:46 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500001008 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:18:51 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:05  id:0x0x500001008 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:19:02 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x50000100a [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:19:17 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:15  id:0x0x50000100a [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:19:17 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x50000100f [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:21:00 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:01:43  id:0x0x50000100f [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:21:02 +0200 Assertions          	PID 3495(Google Chrome) Released NoIdleSleepAssertion "Playing audio" 00:02:00  id:0x0x10000100b [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:21:10 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:01:53  id:0x0x100000b31 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:21:11 +0200 Assertions          	PID 3495(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500001014 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:26:00 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:21:35  id:0x0x1000000269 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:27:19 +0200 Assertions          	PID 62(powerd) TurnedOn InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:00:00  id:0x0x1000000269 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:27:19 +0200 Assertions          	PID 3495(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:06:07  id:0x0x500001014 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:27:21 +0200 Assertions          	PID 3495(Google Chrome) Released NoIdleSleepAssertion "Playing audio" 00:06:09  id:0x0x100001015 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:27:27 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:06:16  id:0x0x100000b31 [System: DeclUser IntPrevDisp kDisp]          
+Sleep/Wakes since boot:69   Dark Wake Count in this sleep cycle:1
+
+Time stamp                Domain              	Message                                                                    	Duration  	Delay     
+==========                ======              	=======                                                                    	========  	=====     
+UUID: BA7C99FA-D8C6-40F0-8BC1-66CBECC9BEFD
+2016-06-01 23:29:00 +0200 Notification        	Display is turned off                                                      	          
+2016-06-01 23:29:00 +0200 Assertions          	PID 111(hidd) Summary UserIsActive "com.apple.iohideventsystem.queue.tickle" 02:23:28  id:0x0x900000ca2 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:29:00 +0200 Assertions          	PID 62(powerd) Summary InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:01:41  id:0x0x1000000269 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-01 23:29:00 +0200 Assertions          	PID 62(powerd) Created InternalPreventSleep "com.apple.powermanagement.darkwakelinger" 00:00:00  id:0x0xd00001032 [System: DeclUser SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-01 23:29:00 +0200 Assertions          	Kernel Idle sleep preventers: -None-          
+2016-06-01 23:29:15 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventSleep "com.apple.powermanagement.darkwakelinger" 00:00:15  id:0x0xd00001032 [System: DeclUser SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-01 23:29:15 +0200 Sleep               	Entering Sleep state due to 'Clamshell Sleep': Using AC (Charge:100%) 3600 secs 
+2016-06-01 23:29:18 +0200 Wake Requests       	[proc=mDNSResponder request=Maintenance inDelta=7197] [proc=UserEventAgent request=SleepService inDelta=22496 info="AppRefresh:com.apple.apsd.apprefresh,BGTask:com.apple.SoftwareUpdate.Activity,"] [*proc=UserEventAgent request=TimerPlugin inDelta=3596 info="AppRefresh:com.apple.apsd.apprefresh,BGTask:com.apple.SoftwareUpdate.Activity,"] [proc=UserEventAgent request=SleepService inDelta=22496 info="AppRefresh:com.apple.mail.ApplicationRefresh,BGTask:com.apple.Safari.SafeBrowsing.Update,"] [proc=UserEventAgent request=TimerPlugin inDelta=3596 info="AppRefresh:com.apple.mail.ApplicationRefresh,BGTask:com.apple.Safari.SafeBrowsing.Update,"]           
+2016-06-01 23:29:18 +0200 PM Client Acks      	Delays to Sleep notifications: [com.apple.apsd is slow(3013 ms)]           
+2016-06-02 00:29:15 +0200 Kernel Client Acks  	Delays to Sleep notifications: [powerd is slow(3017 ms)] [AppleThunderboltNHIType2 driver is slow(msg: WillChangeState to 2)(356 ms)] [AppleAHCIDiskQueueManager driver is slow(msg: SetState to 0)(304 ms)] [RP03 driver is slow(msg: SetState to 0)(1006 ms)]           
+2016-06-02 00:29:15 +0200 Assertions          	PID 103(mDNSResponder) Created MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd00001046 [System: DeclUser SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 00:29:15 +0200 Assertions          	PID 103(mDNSResponder) Released MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd00001046 [System: DeclUser IntPrevDisp kDisp]          
+2016-06-02 00:29:15 +0200 com.apple.sleepservices.sessionStarted	SleepService: window begins with cap time=86400 secs                       	          
+2016-06-02 00:29:15 +0200 DarkWake            	DarkWake from Deep Idle [CDNPB] due to RTC/Maintenance: Using AC (Charge:100%) 123 secs  
+2016-06-02 00:29:15 +0200 HibernateStats      	hibmode=3 standbydelay=10800                                               	          rd=235 ms 	
+2016-06-02 00:29:15 +0200 Kernel Client Acks  	Delays to Wake notifications: [SS03 driver is slow(msg: SetState to 3)(402 ms)] [AppleAHCIDiskQueueManager driver is slow(msg: SetState to 3)(372 ms)]           
+2016-06-02 00:29:15 +0200 Assertions          	PID 88(apsd) Summary ApplePushServiceTask "com.apple.apsd-lastpowerassertionlinger" 00:00:00  id:0x0xb00001045 [System: DeclUser BGTask IntPrevDisp kCPU kDisp]          
+2016-06-02 00:29:15 +0200 Assertions          	PID 62(powerd) Summary BackgroundTask "Powerd - Wait for client BackgroundTask assertions" 00:00:00  id:0x0xb00001047 [System: DeclUser BGTask IntPrevDisp kCPU kDisp]          
+2016-06-02 00:29:15 +0200 Assertions          	PID 62(powerd) Created InternalPreventSleep "com.apple.powermanagement.acwakelinger" 00:00:00  id:0x0xd00001049 [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 00:29:15 +0200 Assertions          	PID 307(UserEventAgent) Created BackgroundTask "com.apple.Safari.SafeBrowsing.Update" 00:00:00  id:0x0xb0000104c [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 00:29:15 +0200 Assertions          	PID 51(UserEventAgent) Created BackgroundTask "com.apple.SoftwareUpdate.Activity" 00:00:00  id:0x0xb0000104d [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 00:29:15 +0200 Assertions          	PID 51(UserEventAgent) Created BackgroundTask "com.apple.backupd-auto" 00:00:00  id:0x0xb0000104e [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 00:29:16 +0200 Assertions          	PID 51(UserEventAgent) Released BackgroundTask "com.apple.SoftwareUpdate.Activity" 00:00:00  id:0x0xb0000104d [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 00:29:16 +0200 Assertions          	PID 12995(softwareupdate_notify_agent) Created BackgroundTask "com.apple.softwareupdate.NotifyAgentAssertion" 00:00:00  id:0x0xb0000104f [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 00:29:18 +0200 Assertions          	PID 307(UserEventAgent) Released BackgroundTask "com.apple.Safari.SafeBrowsing.Update" 00:00:02  id:0x0xb0000104c [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 00:29:20 +0200 Assertions          	PID 51(UserEventAgent) Created BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb00001050 [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 00:29:20 +0200 Assertions          	PID 51(UserEventAgent) Released BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb00001050 [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 00:29:25 +0200 Assertions          	PID 62(powerd) TimedOut BackgroundTask "Powerd - Wait for client BackgroundTask assertions" 00:00:10  id:0x0xb00001047 [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 00:29:25 +0200                     	Summary- [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp] Using AC(Charge: 100	          
+2016-06-02 00:29:25 +0200 Assertions          	PID 62(powerd) TimedOut ApplePushServiceTask "Powerd - Wait for client pushService assertions" 00:00:10  id:0x0xa00001048 [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 00:29:35 +0200 Assertions          	PID 88(apsd) Released InteractivePushServiceTask "com.apple.apsd-keepalive-push.apple.com" 00:00:20  id:0x0xa0000104b [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 00:29:41 +0200 com.apple.sleepservices.sessionTerminated	SleepService: window has terminated.                                       	          
+2016-06-02 00:29:46 +0200 Assertions          	PID 51(UserEventAgent) Released BackgroundTask "com.apple.backupd-auto" 00:00:30  id:0x0xb0000104e [System: DeclUser BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 00:29:51 +0200 Assertions          	PID 51(UserEventAgent) Created BackgroundTask "com.apple.backupd-auto" 00:00:00  id:0x0xb0000105a [System: DeclUser BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 00:29:51 +0200 Assertions          	PID 51(UserEventAgent) Created BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb0000105b [System: DeclUser BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 00:29:51 +0200 Assertions          	PID 51(UserEventAgent) Released BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb0000105b [System: DeclUser BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 00:30:00 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventSleep "com.apple.powermanagement.acwakelinger" 00:00:45  id:0x0xd00001049 [System: DeclUser BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 00:30:21 +0200 Assertions          	PID 51(UserEventAgent) Released BackgroundTask "com.apple.backupd-auto" 00:00:30  id:0x0xb0000105a [System: DeclUser BGTask IntPrevDisp kCPU kDisp]          
+2016-06-02 00:30:27 +0200 Assertions          	PID 51(UserEventAgent) Created BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb0000105c [System: DeclUser BGTask IntPrevDisp kCPU kDisp]          
+2016-06-02 00:30:27 +0200 Assertions          	PID 51(UserEventAgent) Released BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb0000105c [System: DeclUser BGTask IntPrevDisp kCPU kDisp]          
+2016-06-02 00:31:17 +0200 Assertions          	PID 617(storeassetd) Created BackgroundTask "com.apple.storeagent.UpdateStaging" 00:00:00  id:0x0xb0000105d [System: DeclUser BGTask IntPrevDisp kCPU kDisp]          
+2016-06-02 00:31:17 +0200 Assertions          	PID 12995(softwareupdate_notify_agent) Released BackgroundTask "com.apple.softwareupdate.NotifyAgentAssertion" 00:02:01  id:0x0xb0000104f [System: DeclUser BGTask IntPrevDisp kCPU kDisp]          
+2016-06-02 00:31:18 +0200 Assertions          	PID 617(storeassetd) Released BackgroundTask "com.apple.storeagent.UpdateStaging" 00:00:00  id:0x0xb0000105d [System: DeclUser IntPrevDisp kDisp]          
+2016-06-02 00:31:18 +0200 Sleep               	Entering Sleep state due to 'Maintenance Sleep': Using AC (Charge:100%) 3600 secs 
+2016-06-02 00:31:19 +0200 Wake Requests       	[proc=mDNSResponder request=Maintenance inDelta=7198] [proc=UserEventAgent request=SleepService inDelta=26998 info="AppRefresh:com.apple.apsd.apprefresh,BGTask:com.apple.backupd-auto,"] [*proc=UserEventAgent request=TimerPlugin inDelta=3598 info="AppRefresh:com.apple.apsd.apprefresh,BGTask:com.apple.backupd-auto,"] [proc=UserEventAgent request=SleepService inDelta=26998 info="AppRefresh:com.apple.mail.ApplicationRefresh,BGTask:com.apple.Safari.SafeBrowsing.Update,"] [proc=UserEventAgent request=TimerPlugin inDelta=3598 info="AppRefresh:com.apple.mail.ApplicationRefresh,BGTask:com.apple.Safari.SafeBrowsing.Update,"]           
+2016-06-02 00:31:19 +0200 PM Client Acks      	Delays to Sleep notifications: [com.apple.apsd is slow(1958 ms)]           
+2016-06-02 01:31:18 +0200 Kernel Client Acks  	Delays to Sleep notifications: [AppleThunderboltNHIType2 driver is slow(msg: WillChangeState to 2)(363 ms)] [AppleAHCIDiskQueueManager driver is slow(msg: SetState to 0)(321 ms)] [RP03 driver is slow(msg: SetState to 0)(1009 ms)]           
+2016-06-02 01:31:18 +0200 Assertions          	PID 103(mDNSResponder) Created MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd00001062 [System: DeclUser SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 01:31:18 +0200 com.apple.sleepservices.sessionStarted	SleepService: window begins with cap time=86400 secs                       	          
+2016-06-02 01:31:18 +0200 DarkWake            	DarkWake from Deep Idle [CDNPB] due to RTC/Maintenance: Using AC (Charge:100%) 60 secs   
+2016-06-02 01:31:18 +0200 HibernateStats      	hibmode=3 standbydelay=10800                                               	          rd=235 ms 	
+2016-06-02 01:31:18 +0200 Kernel Client Acks  	Delays to Wake notifications: [SS03 driver is slow(msg: SetState to 3)(402 ms)]           
+2016-06-02 01:31:18 +0200 Assertions          	PID 88(apsd) Summary ApplePushServiceTask "com.apple.apsd-lastpowerassertionlinger" 00:00:00  id:0x0xb00001061 [System: DeclUser BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 01:31:18 +0200 Assertions          	PID 62(powerd) Summary BackgroundTask "Powerd - Wait for client BackgroundTask assertions" 00:00:00  id:0x0xb00001063 [System: DeclUser BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 01:31:18 +0200 Assertions          	PID 62(powerd) Created InternalPreventSleep "com.apple.powermanagement.acwakelinger" 00:00:00  id:0x0xd00001065 [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 01:31:18 +0200 Assertions          	PID 307(UserEventAgent) Created BackgroundTask "com.apple.Safari.SafeBrowsing.Update" 00:00:00  id:0x0xb00001068 [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 01:31:18 +0200 Assertions          	PID 51(UserEventAgent) Created BackgroundTask "com.apple.backupd-auto" 00:00:00  id:0x0xb00001069 [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 01:31:18 +0200 Assertions          	PID 103(mDNSResponder) Released MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd00001062 [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 01:31:22 +0200 Assertions          	PID 51(UserEventAgent) Created BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb00001073 [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 01:31:22 +0200 Assertions          	PID 51(UserEventAgent) Released BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb00001073 [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 01:31:28 +0200 Assertions          	PID 62(powerd) TimedOut BackgroundTask "Powerd - Wait for client BackgroundTask assertions" 00:00:10  id:0x0xb00001063 [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 01:31:28 +0200 Assertions          	PID 62(powerd) TimedOut ApplePushServiceTask "Powerd - Wait for client pushService assertions" 00:00:10  id:0x0xa00001064 [System: DeclUser PushSrvc BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 01:31:28 +0200 com.apple.sleepservices.sessionTerminated	SleepService: window has terminated.                                       	          
+2016-06-02 01:31:48 +0200 Assertions          	PID 51(UserEventAgent) Released BackgroundTask "com.apple.backupd-auto" 00:00:30  id:0x0xb00001069 [System: DeclUser BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 01:31:56 +0200 Assertions          	PID 51(UserEventAgent) Created BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb00001074 [System: DeclUser BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 01:31:56 +0200 Assertions          	PID 51(UserEventAgent) Released BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb00001074 [System: DeclUser BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 01:32:02 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventSleep "com.apple.powermanagement.acwakelinger" 00:00:44  id:0x0xd00001065 [System: DeclUser BGTask SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 01:32:09 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 02:04:50  id:0x0x1000000269 [System: DeclUser BGTask IntPrevDisp kCPU kDisp]          
+2016-06-02 01:32:18 +0200 Assertions          	PID 307(UserEventAgent) Released BackgroundTask "com.apple.Safari.SafeBrowsing.Update" 00:01:00  id:0x0xb00001068 [System: DeclUser kDisp]          
+2016-06-02 01:32:18 +0200 Sleep               	Entering Sleep state due to 'Maintenance Sleep': Using AC (Charge:100%) 3600 secs 
+2016-06-02 01:32:20 +0200 Wake Requests       	[proc=mDNSResponder request=Maintenance inDelta=7198] [proc=UserEventAgent request=SleepService inDelta=23398 info="AppRefresh:com.apple.apsd.apprefresh,BGTask:com.apple.backupd-auto,"] [*proc=UserEventAgent request=TimerPlugin inDelta=3598 info="AppRefresh:com.apple.apsd.apprefresh,BGTask:com.apple.backupd-auto,"] [proc=UserEventAgent request=SleepService inDelta=23398 info="AppRefresh:com.apple.mail.ApplicationRefresh,BGTask:com.apple.Safari.SafeBrowsing.Update,"] [proc=UserEventAgent request=TimerPlugin inDelta=3598 info="AppRefresh:com.apple.mail.ApplicationRefresh,BGTask:com.apple.Safari.SafeBrowsing.Update,"]           
+2016-06-02 01:32:20 +0200 PM Client Acks      	Delays to Sleep notifications: [com.apple.apsd is slow(1889 ms)]           
+2016-06-02 02:32:18 +0200 Kernel Client Acks  	Delays to Sleep notifications: [AppleThunderboltNHIType2 driver is slow(msg: WillChangeState to 2)(363 ms)] [AppleAHCIDiskQueueManager driver is slow(msg: SetState to 0)(309 ms)] [RP03 driver is slow(msg: SetState to 0)(1006 ms)]           
+2016-06-02 02:32:18 +0200 Assertions          	PID 103(mDNSResponder) Created MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd00001079 [System: DeclUser SRPrevSleep kCPU kDisp]          
+2016-06-02 02:32:18 +0200 Assertions          	PID 103(mDNSResponder) Released MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd00001079 [System: DeclUser kDisp]          
+2016-06-02 02:32:18 +0200 com.apple.sleepservices.sessionStarted	SleepService: window begins with cap time=86400 secs                       	          
+2016-06-02 02:32:18 +0200 DarkWake            	DarkWake from Deep Idle [CDNPB] due to RTC/Maintenance: Using AC (Charge:100%) 60 secs   
+2016-06-02 02:32:18 +0200 HibernateStats      	hibmode=3 standbydelay=10800                                               	          rd=235 ms 	
+2016-06-02 02:32:18 +0200 Kernel Client Acks  	Delays to Wake notifications: [SS03 driver is slow(msg: SetState to 3)(402 ms)]           
+2016-06-02 02:32:18 +0200 Assertions          	PID 88(apsd) Summary ApplePushServiceTask "com.apple.apsd-lastpowerassertionlinger" 00:00:00  id:0x0xb00001078 [System: DeclUser BGTask kCPU kDisp]          
+2016-06-02 02:32:18 +0200 Assertions          	PID 62(powerd) Summary BackgroundTask "Powerd - Wait for client BackgroundTask assertions" 00:00:00  id:0x0xb0000107a [System: DeclUser BGTask kCPU kDisp]          
+2016-06-02 02:32:18 +0200 Assertions          	PID 62(powerd) Created InternalPreventSleep "com.apple.powermanagement.acwakelinger" 00:00:00  id:0x0xd0000107c [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 02:32:18 +0200 Assertions          	PID 51(UserEventAgent) Created BackgroundTask "com.apple.backupd-auto" 00:00:00  id:0x0xb0000107f [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 02:32:18 +0200 Assertions          	PID 307(UserEventAgent) Created BackgroundTask "com.apple.Safari.SafeBrowsing.Update" 00:00:00  id:0x0xb00001080 [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 02:32:28 +0200 Assertions          	PID 62(powerd) TimedOut BackgroundTask "Powerd - Wait for client BackgroundTask assertions" 00:00:10  id:0x0xb0000107a [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 02:32:28 +0200 Assertions          	PID 62(powerd) TimedOut ApplePushServiceTask "Powerd - Wait for client pushService assertions" 00:00:10  id:0x0xa0000107b [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 02:32:28 +0200 com.apple.sleepservices.sessionTerminated	SleepService: window has terminated.                                       	          
+2016-06-02 02:32:48 +0200 Assertions          	PID 51(UserEventAgent) Released BackgroundTask "com.apple.backupd-auto" 00:00:30  id:0x0xb0000107f [System: DeclUser BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 02:33:03 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventSleep "com.apple.powermanagement.acwakelinger" 00:00:45  id:0x0xd0000107c [System: DeclUser BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 02:33:09 +0200 Assertions          	PID 307(UserEventAgent) Created BackgroundTask "com.apple.suggestions.harvest" 00:00:00  id:0x0xb0000108a [System: DeclUser BGTask kCPU kDisp]          
+2016-06-02 02:33:09 +0200 Assertions          	PID 307(UserEventAgent) Released BackgroundTask "com.apple.suggestions.harvest" 00:00:00  id:0x0xb0000108a [System: DeclUser BGTask kCPU kDisp]          
+2016-06-02 02:33:18 +0200 Assertions          	PID 307(UserEventAgent) Released BackgroundTask "com.apple.Safari.SafeBrowsing.Update" 00:01:00  id:0x0xb00001080 [System: DeclUser kDisp]          
+2016-06-02 02:33:18 +0200 Sleep               	Entering Sleep state due to 'Maintenance Sleep': Using AC (Charge:100%) 3600 secs 
+2016-06-02 02:33:20 +0200 Wake Requests       	[proc=mDNSResponder request=Maintenance inDelta=7198] [proc=UserEventAgent request=SleepService inDelta=19797 info="AppRefresh:com.apple.apsd.apprefresh,BGTask:com.apple.backupd-auto,"] [*proc=UserEventAgent request=TimerPlugin inDelta=3597 info="AppRefresh:com.apple.apsd.apprefresh,BGTask:com.apple.backupd-auto,"] [proc=UserEventAgent request=SleepService inDelta=19797 info="AppRefresh:com.apple.mail.ApplicationRefresh,BGTask:com.apple.Safari.SafeBrowsing.Update,"] [proc=UserEventAgent request=TimerPlugin inDelta=3597 info="AppRefresh:com.apple.mail.ApplicationRefresh,BGTask:com.apple.Safari.SafeBrowsing.Update,"]           
+2016-06-02 02:33:20 +0200 PM Client Acks      	Delays to Sleep notifications: [com.apple.apsd is slow(1850 ms)]           
+2016-06-02 03:33:18 +0200 Kernel Client Acks  	Delays to Sleep notifications: [AppleThunderboltNHIType2 driver is slow(msg: WillChangeState to 2)(363 ms)] [AppleAHCIDiskQueueManager driver is slow(msg: SetState to 0)(309 ms)] [RP03 driver is slow(msg: SetState to 0)(1004 ms)]           
+2016-06-02 03:33:18 +0200 Assertions          	PID 103(mDNSResponder) Created MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd0000108f [System: DeclUser SRPrevSleep kCPU kDisp]          
+2016-06-02 03:33:18 +0200 Assertions          	PID 103(mDNSResponder) Released MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd0000108f [System: DeclUser kDisp]          
+2016-06-02 03:33:18 +0200 com.apple.sleepservices.sessionStarted	SleepService: window begins with cap time=86400 secs                       	          
+2016-06-02 03:33:18 +0200 DarkWake            	DarkWake from Deep Idle [CDNPB] due to RTC/Maintenance: Using AC (Charge:100%) 60 secs   
+2016-06-02 03:33:18 +0200 HibernateStats      	hibmode=3 standbydelay=10800                                               	          rd=235 ms 	
+2016-06-02 03:33:18 +0200 Kernel Client Acks  	Delays to Wake notifications: [SS03 driver is slow(msg: SetState to 3)(402 ms)]           
+2016-06-02 03:33:18 +0200 Assertions          	PID 88(apsd) Summary ApplePushServiceTask "com.apple.apsd-lastpowerassertionlinger" 00:00:00  id:0x0xb0000108e [System: DeclUser BGTask kCPU kDisp]          
+2016-06-02 03:33:18 +0200 Assertions          	PID 62(powerd) Summary BackgroundTask "Powerd - Wait for client BackgroundTask assertions" 00:00:00  id:0x0xb00001090 [System: DeclUser BGTask kCPU kDisp]          
+2016-06-02 03:33:18 +0200 Assertions          	PID 62(powerd) Created InternalPreventSleep "com.apple.powermanagement.acwakelinger" 00:00:00  id:0x0xd00001092 [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 03:33:18 +0200 Assertions          	PID 51(UserEventAgent) Created BackgroundTask "com.apple.backupd-auto" 00:00:00  id:0x0xb00001095 [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 03:33:18 +0200 Assertions          	PID 51(UserEventAgent) Created BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb00001096 [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 03:33:18 +0200 Assertions          	PID 307(UserEventAgent) Created BackgroundTask "com.apple.Safari.SafeBrowsing.Update" 00:00:00  id:0x0xb00001097 [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 03:33:18 +0200 Assertions          	PID 51(UserEventAgent) Released BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb00001096 [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 03:33:28 +0200 Assertions          	PID 62(powerd) TimedOut BackgroundTask "Powerd - Wait for client BackgroundTask assertions" 00:00:10  id:0x0xb00001090 [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 03:33:28 +0200 Assertions          	PID 62(powerd) TimedOut ApplePushServiceTask "Powerd - Wait for client pushService assertions" 00:00:10  id:0x0xa00001091 [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 03:33:28 +0200 com.apple.sleepservices.sessionTerminated	SleepService: window has terminated.                                       	          
+2016-06-02 03:33:48 +0200 Assertions          	PID 51(UserEventAgent) Released BackgroundTask "com.apple.backupd-auto" 00:00:30  id:0x0xb00001095 [System: DeclUser BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 03:33:50 +0200 Assertions          	PID 51(UserEventAgent) Created BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb000010a1 [System: DeclUser BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 03:33:50 +0200 Assertions          	PID 51(UserEventAgent) Released BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb000010a1 [System: DeclUser BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 03:34:03 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventSleep "com.apple.powermanagement.acwakelinger" 00:00:45  id:0x0xd00001092 [System: DeclUser BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 03:34:18 +0200 Assertions          	PID 307(UserEventAgent) Released BackgroundTask "com.apple.Safari.SafeBrowsing.Update" 00:01:00  id:0x0xb00001097 [System: DeclUser kDisp]          
+2016-06-02 03:34:18 +0200 Sleep               	Entering Sleep state due to 'Maintenance Sleep': Using AC (Charge:100%) 3600 secs 
+2016-06-02 03:34:20 +0200 Wake Requests       	[proc=mDNSResponder request=Maintenance inDelta=7198] [proc=UserEventAgent request=SleepService inDelta=16197 info="AppRefresh:com.apple.apsd.apprefresh,BGTask:com.apple.backupd-auto,"] [*proc=UserEventAgent request=TimerPlugin inDelta=3597 info="AppRefresh:com.apple.apsd.apprefresh,BGTask:com.apple.backupd-auto,"] [proc=UserEventAgent request=SleepService inDelta=16197 info="AppRefresh:com.apple.mail.ApplicationRefresh,BGTask:com.apple.Safari.SafeBrowsing.Update,"] [proc=UserEventAgent request=TimerPlugin inDelta=3597 info="AppRefresh:com.apple.mail.ApplicationRefresh,BGTask:com.apple.Safari.SafeBrowsing.Update,"]           
+2016-06-02 03:34:20 +0200 PM Client Acks      	Delays to Sleep notifications: [com.apple.apsd is slow(1996 ms)]           
+2016-06-02 04:34:18 +0200 Kernel Client Acks  	Delays to Sleep notifications: [AppleThunderboltNHIType2 driver is slow(msg: WillChangeState to 2)(364 ms)] [AppleAHCIDiskQueueManager driver is slow(msg: SetState to 0)(310 ms)] [RP03 driver is slow(msg: SetState to 0)(1012 ms)]           
+2016-06-02 04:34:18 +0200 Assertions          	PID 103(mDNSResponder) Created MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd000010a6 [System: DeclUser SRPrevSleep kCPU kDisp]          
+2016-06-02 04:34:18 +0200 Assertions          	PID 103(mDNSResponder) Released MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd000010a6 [System: DeclUser kDisp]          
+2016-06-02 04:34:18 +0200 com.apple.sleepservices.sessionStarted	SleepService: window begins with cap time=86400 secs                       	          
+2016-06-02 04:34:18 +0200 DarkWake            	DarkWake from Deep Idle [CDNPB] due to RTC/Maintenance: Using AC (Charge:100%) 45 secs   
+2016-06-02 04:34:18 +0200 HibernateStats      	hibmode=3 standbydelay=10800                                               	          rd=235 ms 	
+2016-06-02 04:34:18 +0200 Kernel Client Acks  	Delays to Wake notifications: [SS03 driver is slow(msg: SetState to 3)(404 ms)]           
+2016-06-02 04:34:18 +0200 Assertions          	PID 88(apsd) Summary ApplePushServiceTask "com.apple.apsd-lastpowerassertionlinger" 00:00:00  id:0x0xb000010a5 [System: DeclUser BGTask kCPU kDisp]          
+2016-06-02 04:34:18 +0200 Assertions          	PID 62(powerd) Summary BackgroundTask "Powerd - Wait for client BackgroundTask assertions" 00:00:00  id:0x0xb000010a7 [System: DeclUser BGTask kCPU kDisp]          
+2016-06-02 04:34:18 +0200 Assertions          	PID 62(powerd) Created InternalPreventSleep "com.apple.powermanagement.acwakelinger" 00:00:00  id:0x0xd000010a9 [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 04:34:18 +0200 Assertions          	PID 51(UserEventAgent) Created BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb000010ac [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 04:34:18 +0200 Assertions          	PID 51(UserEventAgent) Created BackgroundTask "com.apple.backupd-auto" 00:00:00  id:0x0xb000010ad [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 04:34:18 +0200 Assertions          	PID 51(UserEventAgent) Released BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb000010ac [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 04:34:18 +0200 Assertions          	PID 307(UserEventAgent) Created BackgroundTask "com.apple.Safari.SafeBrowsing.Update" 00:00:00  id:0x0xb000010ae [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 04:34:19 +0200 Assertions          	PID 307(UserEventAgent) Released BackgroundTask "com.apple.Safari.SafeBrowsing.Update" 00:00:01  id:0x0xb000010ae [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 04:34:28 +0200 Assertions          	PID 62(powerd) TimedOut BackgroundTask "Powerd - Wait for client BackgroundTask assertions" 00:00:10  id:0x0xb000010a7 [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 04:34:28 +0200 Assertions          	PID 62(powerd) TimedOut ApplePushServiceTask "Powerd - Wait for client pushService assertions" 00:00:10  id:0x0xa000010a8 [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 04:34:38 +0200 Assertions          	PID 88(apsd) Released InteractivePushServiceTask "com.apple.apsd-keepalive-push.apple.com" 00:00:20  id:0x0xa000010ab [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 04:34:42 +0200 com.apple.sleepservices.sessionTerminated	SleepService: window has terminated.                                       	          
+2016-06-02 04:34:48 +0200 Assertions          	PID 51(UserEventAgent) Created BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb000010b8 [System: DeclUser BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 04:34:48 +0200 Assertions          	PID 51(UserEventAgent) Released BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb000010b8 [System: DeclUser BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 04:34:48 +0200 Assertions          	PID 51(UserEventAgent) Released BackgroundTask "com.apple.backupd-auto" 00:00:30  id:0x0xb000010ad [System: DeclUser SRPrevSleep kCPU kDisp]          
+2016-06-02 04:35:03 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventSleep "com.apple.powermanagement.acwakelinger" 00:00:45  id:0x0xd000010a9 [System: DeclUser SRPrevSleep kCPU kDisp]          
+2016-06-02 04:35:03 +0200                     	Summary- [System: DeclUser kDisp] Using AC(Charge: 100)                    	          
+2016-06-02 04:35:03 +0200 Sleep               	Entering Sleep state due to 'Maintenance Sleep': Using AC (Charge:100%) 3600 secs 
+2016-06-02 04:35:04 +0200 Wake Requests       	[proc=mDNSResponder request=Maintenance inDelta=7199] [proc=UserEventAgent request=SleepService inDelta=12598 info="AppRefresh:com.apple.apsd.apprefresh,BGTask:com.apple.backupd-auto,"] [*proc=UserEventAgent request=TimerPlugin inDelta=3598 info="AppRefresh:com.apple.apsd.apprefresh,BGTask:com.apple.backupd-auto,"] [proc=UserEventAgent request=SleepService inDelta=12598 info="AppRefresh:com.apple.mail.ApplicationRefresh,BGTask:com.apple.Safari.SafeBrowsing.Update,"] [proc=UserEventAgent request=TimerPlugin inDelta=3598 info="AppRefresh:com.apple.mail.ApplicationRefresh,BGTask:com.apple.Safari.SafeBrowsing.Update,"]           
+2016-06-02 04:35:04 +0200 PM Client Acks      	Delays to Sleep notifications: [com.apple.apsd is slow(1010 ms)]           
+2016-06-02 05:35:03 +0200 Kernel Client Acks  	Delays to Sleep notifications: [AppleThunderboltNHIType2 driver is slow(msg: WillChangeState to 2)(360 ms)] [AppleAHCIDiskQueueManager driver is slow(msg: SetState to 0)(309 ms)] [RP03 driver is slow(msg: SetState to 0)(1013 ms)]           
+2016-06-02 05:35:03 +0200 Assertions          	PID 103(mDNSResponder) Created MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd000010bd [System: DeclUser SRPrevSleep kCPU kDisp]          
+2016-06-02 05:35:03 +0200 Assertions          	PID 103(mDNSResponder) Released MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd000010bd [System: DeclUser kDisp]          
+2016-06-02 05:35:03 +0200 com.apple.sleepservices.sessionStarted	SleepService: window begins with cap time=86400 secs                       	          
+2016-06-02 05:35:03 +0200 DarkWake            	DarkWake from Deep Idle [CDNPB] due to RTC/Maintenance: Using AC (Charge:100%) 72 secs   
+2016-06-02 05:35:03 +0200 HibernateStats      	hibmode=3 standbydelay=10800                                               	          rd=235 ms 	
+2016-06-02 05:35:03 +0200 Kernel Client Acks  	Delays to Wake notifications: [SS03 driver is slow(msg: SetState to 3)(399 ms)]           
+2016-06-02 05:35:03 +0200 Assertions          	PID 88(apsd) Summary ApplePushServiceTask "com.apple.apsd-lastpowerassertionlinger" 00:00:00  id:0x0xb000010bc [System: DeclUser BGTask kCPU kDisp]          
+2016-06-02 05:35:03 +0200 Assertions          	PID 62(powerd) Summary BackgroundTask "Powerd - Wait for client BackgroundTask assertions" 00:00:00  id:0x0xb000010be [System: DeclUser BGTask kCPU kDisp]          
+2016-06-02 05:35:03 +0200 Assertions          	PID 62(powerd) Created InternalPreventSleep "com.apple.powermanagement.acwakelinger" 00:00:00  id:0x0xd000010c0 [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 05:35:03 +0200 Assertions          	PID 307(UserEventAgent) Created BackgroundTask "com.apple.Safari.SafeBrowsing.Update" 00:00:00  id:0x0xb000010c3 [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 05:35:03 +0200 Assertions          	PID 51(UserEventAgent) Created BackgroundTask "com.apple.backupd-auto" 00:00:00  id:0x0xb000010c4 [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 05:35:13 +0200 Assertions          	PID 62(powerd) TimedOut BackgroundTask "Powerd - Wait for client BackgroundTask assertions" 00:00:10  id:0x0xb000010be [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 05:35:13 +0200                     	Summary- [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp] Using AC(Charge: 100)	          
+2016-06-02 05:35:13 +0200 Assertions          	PID 62(powerd) TimedOut ApplePushServiceTask "Powerd - Wait for client pushService assertions" 00:00:10  id:0x0xa000010bf [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 05:35:22 +0200 Assertions          	PID 88(apsd) Released InteractivePushServiceTask "com.apple.apsd-connectionestablish-push.apple.com" 00:00:18  id:0x0xa000010c5 [System: DeclUser PushSrvc BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 05:35:25 +0200 com.apple.sleepservices.sessionTerminated	SleepService: window has terminated.                                       	          
+2016-06-02 05:35:33 +0200 Assertions          	PID 51(UserEventAgent) Released BackgroundTask "com.apple.backupd-auto" 00:00:30  id:0x0xb000010c4 [System: DeclUser BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 05:35:45 +0200 Assertions          	PID 51(UserEventAgent) Created BackgroundTask "com.apple.backupd-auto" 00:00:00  id:0x0xb000010ce [System: DeclUser BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 05:35:45 +0200 Assertions          	PID 51(UserEventAgent) Created BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb000010cf [System: DeclUser BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 05:35:45 +0200 Assertions          	PID 51(UserEventAgent) Released BackgroundTask "com.apple.metadata.mds_stores.power" 00:00:00  id:0x0xb000010cf [System: DeclUser BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 05:35:48 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventSleep "com.apple.powermanagement.acwakelinger" 00:00:45  id:0x0xd000010c0 [System: DeclUser BGTask SRPrevSleep kCPU kDisp]          
+2016-06-02 05:36:03 +0200 Assertions          	PID 307(UserEventAgent) Released BackgroundTask "com.apple.Safari.SafeBrowsing.Update" 00:01:00  id:0x0xb000010c3 [System: DeclUser BGTask kCPU kDisp]          
+2016-06-02 05:36:15 +0200 Assertions          	PID 51(UserEventAgent) Released BackgroundTask "com.apple.backupd-auto" 00:00:30  id:0x0xb000010ce [System: DeclUser kDisp]          
+2016-06-02 05:36:15 +0200 Sleep               	Entering Sleep state due to 'Maintenance Sleep': Using AC (Charge:100%)           
+2016-06-02 05:36:17 +0200 Wake Requests       	[proc=mDNSResponder request=Maintenance inDelta=7198] [proc=UserEventAgent request=SleepService inDelta=8997 info="AppRefresh:com.apple.apsd.apprefresh,BGTask:com.apple.backupd-auto,"] [proc=UserEventAgent request=TimerPlugin inDelta=5352 info="AppRefresh:com.apple.apsd.apprefresh,BGTask:com.apple.backupd-auto,"] [proc=UserEventAgent request=SleepService inDelta=8997 info="AppRefresh:com.apple.mail.ApplicationRefresh,BGTask:com.apple.Safari.SafeBrowsing.Update,"] [*proc=UserEventAgent request=TimerPlugin inDelta=3597 info="AppRefresh:com.apple.mail.ApplicationRefresh,BGTask:com.apple.Safari.SafeBrowsing.Update,"]           
+2016-06-02 05:36:17 +0200 PM Client Acks      	Delays to Sleep notifications: [com.apple.apsd is slow(1997 ms)]           
+2016-06-02 06:31:14 +0200 Kernel Client Acks  	Delays to Sleep notifications: [AppleThunderboltNHIType2 driver is slow(msg: WillChangeState to 2)(363 ms)] [AppleAHCIDiskQueueManager driver is slow(msg: SetState to 0)(310 ms)] [RP03 driver is slow(msg: SetState to 0)(1005 ms)]           
+2016-06-02 06:31:14 +0200 Assertions          	PID 103(mDNSResponder) Created MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd000010d4 [System: DeclUser SRPrevSleep kCPU kDisp]          
+2016-06-02 06:31:14 +0200 Assertions          	PID 111(hidd) TimedOut UserIsActive "com.apple.iohideventsystem.queue.tickle" 09:25:42  id:0x0x900000ca2 [System: DeclUser SRPrevSleep kCPU kDisp]          
+2016-06-02 06:31:14 +0200                     	Summary- [System: SRPrevSleep kCPU] Using Batt(Charge: 100)                	          
+2016-06-02 06:31:14 +0200                     	Summary- [System: No Assertions] Using Batt(Charge: 100)                   	          
+2016-06-02 06:31:14 +0200 Assertions          	PID 103(mDNSResponder) Released MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd000010d4 [System: No Assertions]          
+2016-06-02 06:31:14 +0200 Assertions          	PID 62(powerd) Created InternalPreventSleep "PM configd - Wait for Device enumeration" 00:00:00  id:0x0xd000010d5 [System: No Assertions]          
+2016-06-02 06:31:14 +0200 DarkWake            	DarkWake from Deep Idle [CDN] due to EC.ACDetach/Maintenance: Using BATT (Charge:100%) 4 secs    
+2016-06-02 06:31:14 +0200 HibernateStats      	hibmode=3 standbydelay=10800                                               	          rd=235 ms 	
+2016-06-02 06:31:14 +0200 Kernel Client Acks  	Delays to Wake notifications: [SS03 driver is slow(msg: SetState to 3)(403 ms)]           
+2016-06-02 06:31:17 +0200 Assertions          	Kernel Idle sleep preventers: IODisplayWrangler          
+2016-06-02 06:31:17 +0200 Notification        	Display is turned on                                                       	          
+2016-06-02 06:31:18 +0200 Wake                	DarkWake to FullWake from Deep Idle [CDNVA] due to HID Activity: Using BATT (Charge:100%) 43 secs   
+2016-06-02 06:31:18 +0200 HibernateStats      	hibmode=3 standbydelay=10800                                               	          rd=235 ms 	
+2016-06-02 06:31:18 +0200 Kernel Client Acks  	Delays to Wake notifications: [AppleIntelFramebuffer driver is slow(msg: SetState to 2)(339 ms)]           
+2016-06-02 06:31:19 +0200 Assertions          	PID 111(hidd) Created UserIsActive "com.apple.iohideventsystem.queue.tickle" 00:00:00  id:0x0x9000010f5 [System: PrevIdle DeclUser SRPrevSleep kCPU kDisp]          
+2016-06-02 06:31:33 +0200 Assertions          	PID 62(powerd) Released InternalPreventSleep "PM configd - Wait for Device enumeration" 00:00:18  id:0x0xd000010d5 [System: PrevIdle DeclUser kDisp]          
+Sleep/Wakes since boot:76   Dark Wake Count in this sleep cycle:7
+
+Time stamp                Domain              	Message                                                                    	Duration  	Delay     
+==========                ======              	=======                                                                    	========  	=====     
+UUID: D0E4DF1F-97C0-4C68-B314-DDD7C22FFF1A
+2016-06-02 06:31:46 +0200 Notification        	Display is turned off                                                      	          
+2016-06-02 06:31:46 +0200 Assertions          	PID 13088(AddressBookSourceSync) Summary PreventUserIdleSystemSleep "Address Book Source Sync" 00:00:28  id:0x0x1000010ea [System: PrevIdle DeclUser kDisp]          
+2016-06-02 06:31:46 +0200 Assertions          	PID 111(hidd) Summary UserIsActive "com.apple.iohideventsystem.queue.tickle" 00:00:27  id:0x0x9000010f5 [System: PrevIdle DeclUser kDisp]          
+2016-06-02 06:31:46 +0200 Assertions          	PID 307(UserEventAgent) Summary BackgroundTask "com.apple.AddressBook.ScheduledSync" 00:00:28  id:0x0xb000010eb [System: PrevIdle DeclUser kDisp]          
+2016-06-02 06:31:46 +0200 Assertions          	Kernel Idle sleep preventers: -None-          
+2016-06-02 06:31:46 +0200 Assertions          	PID 62(powerd) Created InternalPreventSleep "com.apple.powermanagement.darkwakelinger" 00:00:00  id:0x0xd00001101 [System: PrevIdle DeclUser SRPrevSleep kCPU kDisp]          
+2016-06-02 06:31:49 +0200 Assertions          	PID 13088(AddressBookSourceSync) Released PreventUserIdleSystemSleep "Address Book Source Sync" 00:00:30  id:0x0x1000010ea [System: DeclUser SRPrevSleep kCPU kDisp]          
+2016-06-02 06:31:49 +0200 Assertions          	PID 307(UserEventAgent) Released BackgroundTask "com.apple.AddressBook.ScheduledSync" 00:00:30  id:0x0xb000010eb [System: DeclUser SRPrevSleep kCPU kDisp]          
+2016-06-02 06:32:01 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventSleep "com.apple.powermanagement.darkwakelinger" 00:00:15  id:0x0xd00001101 [System: DeclUser SRPrevSleep kCPU kDisp]          
+2016-06-02 06:32:01 +0200                     	Summary- [System: DeclUser kDisp] Using Batt(Charge: 100)                  	          
+2016-06-02 06:32:01 +0200 Sleep               	Entering Sleep state due to 'Clamshell Sleep': Using Batt (Charge:100%) 5659 secs 
+2016-06-02 06:32:04 +0200 PM Client Acks      	Delays to Sleep notifications: [com.apple.apsd is slow(3070 ms)]           
+2016-06-02 08:06:20 +0200 Kernel Client Acks  	Delays to Sleep notifications: [powerd is slow(3074 ms)] [AppleThunderboltNHIType2 driver is slow(msg: WillChangeState to 2)(363 ms)] [AppleAHCIDiskQueueManager driver is slow(msg: SetState to 0)(333 ms)] [RP03 driver is slow(msg: SetState to 0)(1268 ms)]           
+2016-06-02 08:06:20 +0200 Assertions          	Kernel Idle sleep preventers: IODisplayWrangler          
+2016-06-02 08:06:20 +0200 Notification        	Display is turned on                                                       	          
+2016-06-02 08:06:20 +0200 Assertions          	PID 103(mDNSResponder) Created MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd00001116 [System: DeclUser kDisp]          
+2016-06-02 08:06:20 +0200 Assertions          	PID 103(mDNSResponder) Released MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd00001116 [System: DeclUser kDisp]          
+2016-06-02 08:06:20 +0200 Wake                	Wake from Deep Idle [CDNVA] due to EC.LidOpen/Lid Open: Using BATT (Charge:100%) 1266 secs 
+2016-06-02 08:06:20 +0200 HibernateStats      	hibmode=3 standbydelay=10800                                               	          rd=235 ms 	
+2016-06-02 08:06:20 +0200 Kernel Client Acks  	Delays to Wake notifications: [SS03 driver is slow(msg: SetState to 3)(399 ms)] [AppleIntelFramebuffer driver is slow(msg: SetState to 2)(397 ms)] [com_apple_driver_AppleUSBCardReaderDriverNub driver is slow(msg: SetState to 2)(541 ms)]           
+2016-06-02 08:06:20 +0200 PM Client Acks      	Delays to Wake notifications: [AirPort configd plug-in is slow(261 ms)]           
+2016-06-02 08:07:45 +0200 Assertions          	PID 168(coreaudiod) Released PreventUserIdleDisplaySleep "com.apple.audio.context211.preventuseridledisplaysleep" 154:18:12 id:0x0x500000b2e [System: DeclUser kDisp]          
+2016-06-02 08:07:45 +0200 Assertions          	PID 168(coreaudiod) Released PreventUserIdleSystemSleep "com.apple.audio.context211.preventuseridlesleep" 154:18:12 id:0x0x100000b2d [System: DeclUser kDisp]          
+2016-06-02 08:07:45 +0200 Assertions          	PID 168(coreaudiod) Released PreventUserIdleDisplaySleep "com.apple.audio.context212.preventuseridledisplaysleep" 154:18:12 id:0x0x500000b30 [System: DeclUser kDisp]          
+2016-06-02 08:07:45 +0200 Assertions          	PID 168(coreaudiod) Released PreventUserIdleSystemSleep "com.apple.audio.context212.preventuseridlesleep" 154:18:12 id:0x0x100000b2f [System: DeclUser kDisp]          
+2016-06-02 08:07:45 +0200 Assertions          	PID 168(coreaudiod) Released PreventUserIdleDisplaySleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridledisplaysleep" 154:18:12 id:0x0x500000b32 [System: DeclUser kDisp]          
+2016-06-02 08:07:45 +0200 Assertions          	PID 168(coreaudiod) Released PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 08:46:33  id:0x0x100000b31 [System: DeclUser kDisp]          
+2016-06-02 08:15:59 +0200 Assertions          	PID 111(hidd) TimedOut UserIsActive "com.apple.iohideventsystem.queue.tickle" 01:44:40  id:0x0x9000010f5 [System: DeclUser kDisp]          
+2016-06-02 08:15:59 +0200                     	Summary- [System: No Assertions] Using Batt(Charge: 100)                   	          
+2016-06-02 08:16:17 +0200 Assertions          	PID 111(hidd) Created UserIsActive "com.apple.iohideventsystem.queue.tickle" 00:00:00  id:0x0x90000114e [System: DeclUser kDisp]          
+2016-06-02 08:18:49 +0200 Assertions          	PID 111(hidd) TimedOut UserIsActive "com.apple.iohideventsystem.queue.tickle" 00:02:32  id:0x0x90000114e [System: DeclUser kDisp]          
+2016-06-02 08:20:00 +0200 Assertions          	PID 111(hidd) Created UserIsActive "com.apple.iohideventsystem.queue.tickle" 00:00:00  id:0x0x900001156 [System: DeclUser kDisp]          
+2016-06-02 08:20:34 +0200 Assertions          	PID 168(coreaudiod) Released PreventUserIdleDisplaySleep "com.apple.audio.context260.preventuseridledisplaysleep" 133:22:07 id:0x0x500000f35 [System: DeclUser kDisp]          
+2016-06-02 08:20:34 +0200 Assertions          	PID 168(coreaudiod) Released PreventUserIdleSystemSleep "com.apple.audio.context260.preventuseridlesleep" 133:22:07 id:0x0x100000f34 [System: DeclUser kDisp]          
+2016-06-02 08:20:34 +0200 Assertions          	PID 168(coreaudiod) Released PreventUserIdleDisplaySleep "com.apple.audio.context261.preventuseridledisplaysleep" 133:22:07 id:0x0x500000f37 [System: DeclUser kDisp]          
+2016-06-02 08:20:34 +0200 Assertions          	PID 168(coreaudiod) Released PreventUserIdleSystemSleep "com.apple.audio.context261.preventuseridlesleep" 133:22:07 id:0x0x100000f36 [System: DeclUser kDisp]          
+2016-06-02 08:20:34 +0200 Assertions          	PID 168(coreaudiod) Released PreventUserIdleDisplaySleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridledisplaysleep" 133:22:07 id:0x0x500000f39 [System: DeclUser kDisp]          
+2016-06-02 08:20:34 +0200 Assertions          	PID 168(coreaudiod) Released PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 131:40:25 id:0x0x100000f38 [System: DeclUser kDisp]          
+2016-06-02 08:23:05 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500001169 [System: PrevDisp DeclUser kDisp]          
+2016-06-02 08:24:35 +0200 Assertions          	PID 62(powerd) TurnedOn InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:00:00  id:0x0x1000000269 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 08:24:35 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:01:30  id:0x0x500001169 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 08:24:36 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:01:30  id:0x0x100001167 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 08:24:37 +0200 Assertions          	PID 13179(Google Chrome) Released NoIdleSleepAssertion "Playing audio" 00:01:31  id:0x0x10000116a [System: DeclUser IntPrevDisp kDisp]          
+2016-06-02 08:24:50 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500001171 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 08:25:46 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:55  id:0x0x500001171 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 08:25:56 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x50000118d [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 08:26:11 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:14  id:0x0x50000118d [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 08:26:22 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x5000011a9 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 08:26:41 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:18  id:0x0x5000011a9 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 08:26:57 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x5000011aa [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 08:27:02 +0200 Assertions          	PID 13179(Google Chrome) Released NoIdleSleepAssertion "Playing audio" 00:02:04  id:0x0x100001172 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+Sleep/Wakes since boot:77   Dark Wake Count in this sleep cycle:0
+
+Time stamp                Domain              	Message                                                                    	Duration  	Delay     
+==========                ======              	=======                                                                    	========  	=====     
+UUID: B136FD54-B7F1-486A-81C2-8E72B030565B
+2016-06-02 08:27:11 +0200 Notification        	Display is turned off                                                      	          
+2016-06-02 08:27:11 +0200 Assertions          	PID 168(coreaudiod) Summary PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:02:20  id:0x0x100001167 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 08:27:11 +0200 Assertions          	PID 13179(Google Chrome) Summary NoDisplaySleepAssertion "Playing video" 00:00:13  id:0x0x5000011aa [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 08:27:11 +0200 Assertions          	PID 111(hidd) Summary UserIsActive "com.apple.iohideventsystem.queue.tickle" 00:07:10  id:0x0x900001156 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 08:27:11 +0200 Assertions          	PID 88(apsd) Summary ApplePushServiceTask "com.apple.apsd-lastpowerassertionlinger" 00:00:01  id:0x0xb000011af [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 08:27:11 +0200 Assertions          	PID 62(powerd) Summary InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:02:35  id:0x0x1000000269 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 08:27:11 +0200 Assertions          	Kernel Idle sleep preventers: -None-          
+2016-06-02 08:27:11 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:02:20  id:0x0x100001167 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 08:27:11 +0200 Assertions          	PID 62(powerd) Created InternalPreventSleep "com.apple.powermanagement.darkwakelinger" 00:00:00  id:0x0xd000011b0 [System: PrevDisp DeclUser SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 08:27:26 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventSleep "com.apple.powermanagement.darkwakelinger" 00:00:15  id:0x0xd000011b0 [System: PrevDisp DeclUser SRPrevSleep IntPrevDisp kCPU kDisp]          
+2016-06-02 08:27:26 +0200                     	Summary- [System: PrevDisp DeclUser IntPrevDisp kDisp] Using Batt(Charge: 99)	          
+2016-06-02 08:27:26 +0200 Sleep               	Entering Sleep state due to 'Clamshell Sleep': Using Batt (Charge:99%) 10806 secs
+2016-06-02 08:27:29 +0200 PM Client Acks      	Delays to Sleep notifications: [com.apple.apsd is slow(3024 ms)]           
+2016-06-02 11:27:32 +0200 Kernel Client Acks  	Delays to Sleep notifications: [powerd is slow(3027 ms)] [AppleThunderboltNHIType2 driver is slow(msg: WillChangeState to 2)(358 ms)] [AppleAHCIDiskQueueManager driver is slow(msg: SetState to 0)(304 ms)] [RP03 driver is slow(msg: SetState to 0)(1272 ms)]           
+2016-06-02 11:27:32 +0200 Assertions          	PID 103(mDNSResponder) Created MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd000011c5 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 11:27:32 +0200 Assertions          	PID 103(mDNSResponder) Released MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd000011c5 [System: PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 11:27:32 +0200 DarkWake            	DarkWake from Deep Idle [CDN] due to EC.SleepTimer/SleepTimer: Using BATT (Charge:98%) 0 secs    
+2016-06-02 11:27:32 +0200 HibernateStats      	hibmode=3 standbydelay=10800                                               	          rd=235 ms 	
+2016-06-02 11:27:32 +0200 Kernel Client Acks  	Delays to Wake notifications: [SS03 driver is slow(msg: SetState to 3)(401 ms)]           
+2016-06-02 11:27:32 +0200 Sleep               	Entering Sleep state due to 'Maintenance Sleep': Using Batt (Charge:98%) 29613 secs
+2016-06-02 11:27:33 +0200 PM Client Acks      	Delays to Sleep notifications: [com.apple.apsd is slow(351 ms)] [AirPort configd plug-in is slow(1088 ms)]           
+2016-06-02 19:40:59 +0200 Kernel Client Acks  	Delays to Sleep notifications: [com_apple_driver_AppleUSBCardReaderDriverNub driver is slow(msg: SetState to 2)(953 ms)] [RP03 driver is slow(msg: SetState to 0)(1271 ms)] [XHC1 driver is slow(msg: SetState to 0)(329 ms)] [AppleIntelFramebuffer driver is slow(msg: SetState to 2)(445 ms)]           
+2016-06-02 19:40:59 +0200 Assertions          	Kernel Idle sleep preventers: IODisplayWrangler          
+2016-06-02 19:40:59 +0200 Notification        	Display is turned on                                                       	          
+2016-06-02 19:40:59 +0200 Assertions          	PID 103(mDNSResponder) Created MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd000011cd [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:41:00 +0200 Assertions          	PID 103(mDNSResponder) Released MaintenanceWake "mDNSResponder:maintenance" 00:00:00  id:0x0xd000011cd [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:41:05 +0200 Wake                	Wake from Standby [CDNVA] due to EC.LidOpen/Lid Open: Using BATT (Charge:98%)           
+2016-06-02 19:41:05 +0200 HibernateStats      	hibmode=3 standbydelay=10800                                               	          rd=229 ms 	
+2016-06-02 19:41:05 +0200 Kernel Client Acks  	Delays to Wake notifications: [AppleHDADriver driver is slow(msg: SetState to 1)(650 ms)] [SS03 driver is slow(msg: SetState to 3)(407 ms)] [com_apple_driver_AppleUSBCardReaderDriverNub driver is slow(msg: SetState to 2)(1049 ms)]           
+2016-06-02 19:41:11 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 11:14:14  id:0x0x5000011aa [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:43:11 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 11:18:35  id:0x0x1000000269 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:47:20 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500001216 [System: PrevIdle PrevDisp DeclUser kDisp]          
+2016-06-02 19:47:34 +0200 Assertions          	PID 62(powerd) TurnedOn InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:00:00  id:0x0x1000000269 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:47:34 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:13  id:0x0x500001216 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:48:18 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500001218 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:48:54 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:36  id:0x0x500001218 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:48:59 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x50000121a [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:49:44 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:44  id:0x0x50000121a [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:49:47 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x50000121f [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:50:38 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:50  id:0x0x50000121f [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:50:41 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500001221 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:50:44 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:03  id:0x0x500001221 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:51:11 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500001227 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:51:58 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:46  id:0x0x500001227 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:52:26 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x50000122c [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:52:35 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:08  id:0x0x50000122c [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:52:36 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x50000122d [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:53:18 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:42  id:0x0x50000122d [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:53:19 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x50000122f [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:53:20 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:01  id:0x0x50000122f [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:53:41 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500001231 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:54:16 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:35  id:0x0x500001231 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:54:17 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500001235 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:54:24 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:07  id:0x0x500001235 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:54:29 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500001236 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:54:33 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:04  id:0x0x500001236 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:54:34 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500001237 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:54:43 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:09  id:0x0x500001237 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:54:44 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500001238 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:56:30 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:01:45  id:0x0x500001238 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:56:30 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:01:44  id:0x0x100001167 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:56:32 +0200 Assertions          	PID 13179(Google Chrome) Released NoIdleSleepAssertion "Playing audio" 00:01:46  id:0x0x100001239 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:58:19 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:01:45  id:0x0x100001167 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:58:20 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500001247 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:58:23 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:02  id:0x0x500001247 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 19:58:24 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500001249 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 20:00:23 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:12:49  id:0x0x1000000269 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 20:00:29 +0200 Assertions          	PID 62(powerd) TurnedOn InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:00:00  id:0x0x1000000269 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 20:00:29 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:02:05  id:0x0x500001249 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 20:00:29 +0200 Assertions          	PID 13179(Google Chrome) Released NoIdleSleepAssertion "Playing audio" 00:02:04  id:0x0x10000124b [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 20:00:29 +0200 Assertions          	PID 168(coreaudiod) TurnedOff PreventUserIdleSystemSleep "com.apple.audio.AppleHDAEngineOutput:1B,0,1,1:0.context.preventuseridlesleep" 00:02:04  id:0x0x100001167 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 20:00:29 +0200 Assertions          	PID 13179(Google Chrome) Created NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500001250 [System: PrevIdle PrevDisp DeclUser IntPrevDisp kDisp]          
+2016-06-02 20:00:29 +0200 Assertions          	PID 13179(Google Chrome) Released NoDisplaySleepAssertion "Playing video" 00:00:00  id:0x0x500001250 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+2016-06-02 20:02:29 +0200 Assertions          	PID 62(powerd) TimedOut InternalPreventDisplaySleep "com.apple.powermanagement.delayDisplayOff" 00:02:00  id:0x0x1000000269 [System: PrevIdle DeclUser IntPrevDisp kDisp]          
+
+Total Sleep/Wakes since boot:79
+
+2016-06-02 20:13:42 +0200 :Showing all currently held IOKit power assertions
+Assertion status system-wide:
+   BackgroundTask                 0
+   ApplePushServiceTask           0
+   UserIsActive                   1
+   PreventUserIdleDisplaySleep    0
+   PreventSystemSleep             0
+   ExternalMedia                  0
+   PreventUserIdleSystemSleep     1
+   NetworkClientActive            0
+Listed by owning process:
+   pid 111(hidd): [0x0002279600091156] 11:53:41 UserIsActive named: "com.apple.iohideventsystem.queue.tickle" 
+	Timeout will fire in 113 secs Action=TimeoutActionRelease
+   pid 13799(AddressBookSourceSync): [0x000230a200011262] 00:01:58 PreventUserIdleSystemSleep named: "Address Book Source Sync" 
+	Timeout will fire in 1681 secs Action=TimeoutActionTurnOff
+   pid 13179(Google Chrome): [0x000229ed0001120e] 00:30:35 NoIdleSleepAssertion named: "WebRTC has active PeerConnections" 
+   pid 307(UserEventAgent): [0x000230a2000b1263] 00:01:58 BackgroundTask named: "com.apple.AddressBook.ScheduledSync" 
+	Created for PID: 13799. 
+No kernel assertions.
+Idle sleep preventers: IODisplayWrangler
