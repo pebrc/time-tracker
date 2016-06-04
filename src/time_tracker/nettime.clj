@@ -8,7 +8,7 @@
 (defn to-local-date-time [i]
   (t/local-date-time (t/instant i) "UTC"))
 
-(defn login [{:keys [user pw url] :or {:url "https://nettime.brainforce.com/"}}]
+(defn login [{:keys [user pw url] :or {url "https://nettime.brainforce.com/"}}]
   (to url)
   (switch-to-frame "frame[name='workframe']")
   (input-text (input "F_UNr") user)
@@ -47,18 +47,22 @@
   (click (input "F_Speichern"))
   (error))
 
-(def conf )
+;;
 
-(def sample [{:date #inst "2016-06-01" :from "09:00" :to "17:00"}])
+;;(def sample [{:date #inst "2016-06-01" :from "09:00" :to "17:00"}])
+
+(defn do-on-nettime [conf op]
+  (do
+    (set-driver! {:browser :firefox})
+    (login conf)
+    (let [result (op)]
+      (logoff)
+      (quit)
+      result)))
 
 (defn track [conf rs]
-  (let [track (partial record-entry conf)
-        driver (set-driver! {:browser :firefox})
-        _ (login conf)
-        res (doall (map track rs))] 
-    (logoff)
-    (quit)
-    res))
+  (let [track (partial record-entry conf)]
+    (do-on-nettime conf #(doall (map track rs)))))
 
 
 ;;  (track conf sample)
