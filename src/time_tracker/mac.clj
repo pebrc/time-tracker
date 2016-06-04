@@ -10,11 +10,10 @@
 
 (defn parse-secs [s]
   "Wake from Standby [CDNVA] due to EC.LidOpen/Lid Open: Using BATT (Charge:100%) 3286 secs"
-  (second  (re-find #".* (\d+) secs$" s)))
+  (if-let [s (second  (re-find #".* (\d+) secs$" s))]
+    (Integer. s)
+    0))
 
-;;(parse-secs "Wake from Standby [CDNVA] due to EC.LidOpen/Lid Open: Using BATT (Charge:100%) 3286 secs")
-
-;;(parse-secs "Wake from Standby [CDNVA] due to EC.LidOpen/Lid Open: Using BATT (Charge:100%)")
 
 (defn parse-date [s]
   "Date formaat used by pmset: 2016-06-01 23:27:21 +0200"
@@ -25,22 +24,31 @@
   (try
     (let [dstr (subs head 0 26)
           domain (s/trim (subs head 26))]
-      (assoc {} :date (parse-date dstr) :domain (keyword domain) :msg (s/trim tail)))
+      (assoc {} :date (parse-date dstr) :domain (keyword (s/lower-case domain)) :msg (s/trim tail)))
     (catch Exception e {:error e :context [head tail]})))
 
 
-(parse-date-domain ["2016-06-01 21:05:58 +0200 Assertions          " ""])
+(defn assoc-secs [d]
+  (let [secs (parse-secs (:msg d))]
+    (conj d (when secs [:secs secs]))))
 
-(parse-date "2016-06-01 23:27:21x +0200 sfsdfsdfsafjskfjs")
+(def domains #{:wake :sleep :darkwake})
 
-(->> (raw)
-     (s/split-lines)
-     (map #(s/split % #"\t"))
-     (filter #(and (= (count %) 2) (not (s/blank? (first %)))))
-     (map parse-date-domain)
-     (filter #(= :Wake (:domain %)))
-;;     (filter :error)
-     )
+(def drop-junk
+  (filter #(and (= (count %) 2) (not (s/blank? (first %))))))
+
+(def txform
+  (comp
+   (map #(s/split % #"\t"))
+   drop-junk
+   (map parse-date-domain)
+   (filter #(domains (:domain %)))
+   (map assoc-secs)))
+
+
+
+(into [] txform  (->> (raw)
+                      (s/split-lines)))
 
 
 
