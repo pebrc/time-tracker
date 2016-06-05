@@ -1,6 +1,7 @@
 (ns time-tracker.mac
   (require [clojure.java.shell :refer [sh]]
-           [clojure.string :as s]))
+           [clojure.string :as s]
+           [time-tracker.tracker :refer [time-data]]))
 
 (defn raw []
   (let [res (sh "pmset" "-g" "log")]
@@ -46,9 +47,9 @@
    (map assoc-secs)))
 
 
-
-(into [] txform  (->> (raw)
-                      (s/split-lines)))
+(defmethod time-data "Mac OS X" [env c params]
+   (into [] txform  (->> (raw)
+                        (s/split-lines))))
 
 
 
