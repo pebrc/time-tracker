@@ -1,6 +1,5 @@
 (ns time-tracker.config
-  (require [clojure.edn :as edn]
-           [clojure.java.io :as io]
+  (require [time-tracker.io :as io]
            [clojure.spec :as s]))
 
 ;;; SPECs
@@ -16,6 +15,6 @@
   ([]
    (conf "config.edn"))
   ([f]
-   (let [c (edn/read-string (slurp f))]
+   (let [c (io/read-edn f)]
      (if (s/valid? ::config c)
        c))))
