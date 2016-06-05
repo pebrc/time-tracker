@@ -29,15 +29,15 @@
 (defn error? []
   (exists? error-q))
 
-(defn error []
+(defn collect-error []
   (if (error?)
     {:error  (text error-q)}))
 
 
 (defn record-entry [{:keys [project]} e]
-  (->(input "F_VonDat")
-     (clear)
-     (input-text  (t/format "dd.MM.yyyy" (to-local-date-time (:date e)))))
+  (-> (input "F_VonDat")
+      (clear)
+      (input-text  (t/format "dd.MM.yyyy" (to-local-date-time (:date e)))))
   (input-text (input "F_VonZeit") (:from e))
   (input-text (input "F_BisZeit") (:to e))
   (input-text (input "F_PId") project)
@@ -45,7 +45,7 @@
   (click (input "F_Aktual"))
   (wait-until #(exists? (input "F_KAId")))
   (click (input "F_Speichern"))
-  (error))
+  (collect-error))
 
 ;;
 
