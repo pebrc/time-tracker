@@ -1,7 +1,9 @@
 (ns time-tracker.mac
   (require [clojure.java.shell :refer [sh]]
            [clojure.string :as s]
-           [time-tracker.tracker :refer [time-data]]))
+           [java-time :as t]
+           [time-tracker.tracker :refer [time-data]]
+           [time-tracker.store :as r]))
 
 (defn raw []
   (let [res (sh "pmset" "-g" "log")]
@@ -38,7 +40,7 @@
 (def drop-junk
   (filter #(and (= (count %) 2) (not (s/blank? (first %))))))
 
-(def txform
+(def parse
   (comp
    (map #(s/split % #"\t"))
    drop-junk
@@ -47,9 +49,44 @@
    (map assoc-secs)))
 
 
+(defn date [{:keys [date tz]}]
+  (-> (t/instant date)
+      (t/zoned-date-time (t/zone-id tz))
+      (t/truncate-to :days))) 
+
+(defn assoc-pkey [e]
+  (assoc e :pkey (date e)))
+
+(defn to-record [es]
+  (reduce
+   (fn [result {:keys [date secs ]}]
+     (update-in result [:r/to] #(t/plus (or % (t/instant date))  (t/seconds secs))))
+   {:r/from (:date (first es)) :r/status :collected :r/tz (:tz (first es)) }
+   es))
+
+(defn aggregate [{:keys [tz]} {:keys [interval] }] 
+  (comp
+   (filter #(= :wake (:domain %)))
+   (map #(assoc % :tz tz))
+   (map assoc-pkey)
+   (filter #(t/contains? interval (:pkey %)))
+   (partition-by :pkey)
+   (map to-record)))
+
+
+
+;; (def sample
+;;  (into [] parse  (->> (raw)
+;;                       (s/split-lines))) )
+
+;(into [] (aggregate {:tz "Europe/Vienna"} { :interval (t/interval (t/zoned-date-time 2016 06 03) (t/zoned-date-time 2016 06 06))}) sample)
+
 (defmethod time-data "Mac OS X" [env c params]
-   (into [] txform  (->> (raw)
-                        (s/split-lines))))
+  (into []
+        (comp parse
+              (aggregate c params))
+        (->> (raw)
+             (s/split-lines))))
 
 
 
