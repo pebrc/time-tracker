@@ -5,9 +5,6 @@
 (defn input [name]
   (str "input[name='" name "']"))
 
-(defn to-local-date-time [i]
-  (t/local-date-time (t/instant i) "UTC"))
-
 (defn login [{:keys [user pw url] :or {url "https://nettime.brainforce.com/"}}]
   (to url)
   (switch-to-frame "frame[name='workframe']")
@@ -34,12 +31,12 @@
     {:error  (text error-q)}))
 
 
-(defn record-entry [{:keys [project]} e]
+(defn record-entry [{:keys [project]} {:keys [from to]}]
   (-> (input "F_VonDat")
       (clear)
-      (input-text  (t/format "dd.MM.yyyy" (to-local-date-time (:date e)))))
-  (input-text (input "F_VonZeit") (:from e))
-  (input-text (input "F_BisZeit") (:to e))
+      (input-text  (t/format "dd.MM.yyyy" from)))
+  (input-text (input "F_VonZeit") (t/format "HH:mm" from))
+  (input-text (input "F_BisZeit") (t/format "HH:mm" to))
   (input-text (input "F_PId") project)
   (input-text "textarea[name='F_Text']" "via time-tracker")
   (click (input "F_Aktual"))
