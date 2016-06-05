@@ -20,15 +20,21 @@
 (defn merge-stores [store & stores]
   store)
 
+(def default-data-dir (str (System/getProperty "user.dir") "/.time-tracker") )
+(def store-tail "tail.edn")
+(defn store-file [dir]
+  (str dir "/" store-tail))
 
-(defn read-store [{:keys [data-dir]}]
-  (let [data  (io/read-edn data-dir)
-        errors (s/explain-data data)]
+
+(defn read-store [{:keys [data-dir] :or {data-dir default-data-dir}}]
+  (let [store (store-file data-dir)
+        data  (if (io/exists? store) (io/read-edn store) [])
+        errors (s/explain-data ::store data)]
     (if errors
       (throw (ex-info "Invalid data in store" errors))
       data)))
 
-(defn write-store [{:keys [data-dir]} data]
-  (io/write-edn data data-dir))
+(defn write-store [{:keys [data-dir] :or {data-dir default-data-dir}} data]
+  (io/write-edn data (store-file data-dir)))
 
 

@@ -2,6 +2,9 @@
   (require [clojure.edn :as edn]
            [clojure.java.io :as io]))
 
+(defn exists? [filename]
+  (.exists (io/file filename)))
+
 (defn read-edn [filename]
   (edn/read-string (slurp filename)))
 
