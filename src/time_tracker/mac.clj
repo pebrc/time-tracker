@@ -48,21 +48,26 @@
    (filter #(domains (:domain %)))
    (map assoc-secs)))
 
+(defn zoned-date-time [date tz]
+  (-> (t/instant date)
+      (t/zoned-date-time (t/zone-id tz))))
 
 (defn date [{:keys [date tz]}]
-  (-> (t/instant date)
-      (t/zoned-date-time (t/zone-id tz))
+  (-> (zoned-date-time date tz)
       (t/truncate-to :days))) 
 
 (defn assoc-pkey [e]
   (assoc e :pkey (date e)))
 
 (defn to-record [es]
-  (reduce
-   (fn [result {:keys [date secs ]}]
-     (update-in result [:r/to] #(t/plus (or % (t/instant date))  (t/seconds secs))))
-   {:r/from (:date (first es)) :r/status :collected :r/tz (:tz (first es)) }
-   es))
+  (let [neutral-el (fn [{:keys [date tz]}] {:r/from (zoned-date-time date tz)
+                                            :r/status :collected
+                                            :r/tz tz})]
+    (reduce
+     (fn [result {:keys [date secs tz]}]
+       (update-in result [:r/to] #(t/plus (or % (zoned-date-time date tz))  (t/seconds secs))))
+     (neutral-el (first es))
+     es)))
 
 (defn aggregate [{:keys [tz]} {:keys [interval] }] 
   (comp
@@ -75,11 +80,11 @@
 
 
 
-;; (def sample
-;;  (into [] parse  (->> (raw)
-;;                       (s/split-lines))) )
+(def sample
+ (into [] parse  (->> (raw)
+                     (s/split-lines))) )
 
-;(into [] (aggregate {:tz "Europe/Vienna"} { :interval (t/interval (t/zoned-date-time 2016 06 03) (t/zoned-date-time 2016 06 06))}) sample)
+;(into [] (aggregate {:tz "Europe/Vienna} {  (t/interval (t/zoned-date-time 2016 06 03) (t/zoned-date-time 2016 06 06))}) sample)
 
 (defmethod time-data "Mac OS X" [env c params]
   (into []
