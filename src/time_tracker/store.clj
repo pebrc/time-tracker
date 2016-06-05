@@ -17,6 +17,9 @@
 
 ;(s/explain-data ::store [{::from #inst "2016-06-01" ::to (Date.) ::tz "Europe/Vienna" ::status :collected}] )
 
+(defn merge-stores [store & stores]
+  store)
+
 
 (defn read-store [{:keys [data-dir]}]
   (let [data  (io/read-edn data-dir)
@@ -25,7 +28,7 @@
       (throw (ex-info "Invalid data in store" errors))
       data)))
 
-(defn write-store [{:key [data-dir]} data]
+(defn write-store [{:keys [data-dir]} data]
   (io/write-edn data data-dir))
 
 
