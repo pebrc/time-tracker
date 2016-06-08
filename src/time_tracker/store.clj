@@ -18,7 +18,14 @@
 ;(s/explain-data ::store [{::from #inst "2016-06-01" ::to (Date.) ::tz "Europe/Vienna" ::status :collected}] )
 
 (defn merge-stores [store & stores]
-  store)
+  (->> (apply concat store stores)
+       (reduce #(assoc %1 (::from %2) %2) {})
+       (vals)))
+
+;(def sample [{::from #inst "2016-06-05T10:06:12+02:00", ::status :collected, ::tz "Europe/Vienna" ::to #inst "2016-06-05T17:48:26+02:00", :error "Die eingegebene Zeit überschneidet sich mit einer bereits erfassten Zeit!"} {::from #inst "2016-06-06T18:19:10+02:00", ::status :collected, ::tz "Europe/Vienna" ::to #inst "2016-06-06T19:06:10+02:00", :error "Entweder Pausenzeiten korrigieren, Checkbox automatisch Pause buchen  wegklicken oder Zeit von/bis korrigieren!"}])
+
+
+
 
 (def default-data-dir (str (System/getProperty "user.dir") "/.time-tracker") )
 (def store-tail "tail.edn")
