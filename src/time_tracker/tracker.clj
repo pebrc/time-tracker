@@ -9,7 +9,9 @@
   {:error (str  "no time-date implementation for " env)})
 
 (defn to-params [stored]
-  {})
+  {:interval(t/interval (t/zoned-date-time 1970 1) (t/zoned-date-time))
+                                        ; (t/interval (t/zoned-date-time 1970 1) (t/minus (t/zoned-date-time) (t/days 1)))
+   })
 
 (defn track [conf]
   (let [stored  (s/read-store conf)]
@@ -19,4 +21,5 @@
          (s/merge-stores stored)
          (s/write-store conf))))
 
-(time-data "Mac OS X" {:tz "Europe/Vienna"} { :interval (t/interval (t/zoned-date-time 2016 06 03) (t/zoned-date-time 2016 06 06))})
+;(time-data "Mac OS X" {:tz "Europe/Vienna"} { :interval (t/interval (t/zoned-date-time 2016 06 03) (t/zoned-date-time 2016 06 06))})
+
