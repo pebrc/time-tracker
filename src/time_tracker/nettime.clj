@@ -2,7 +2,8 @@
   (require [clj-webdriver.taxi :refer :all]
            [java-time :as t]
            [clojure.tools.logging :as log]
-           [time-tracker.store :as r]))
+           [time-tracker.store :as r]
+           [time-tracker.time :refer :all]))
 
 (defn input [name]
   (str "input[name='" name "']"))
@@ -38,18 +39,20 @@
       (clear)
       (input-text v)))
 
-(defn record-entry [{:keys [project]} {:keys [::r/from ::r/to] :as r}]
-  (click (input "F_Reset"))
-  (wait-until #(not (exists? (input "F_KAId"))))
-  (fill (input "F_VonDat") (t/format "dd.MM.yyyy" from))
-  (fill (input "F_VonZeit") (t/format "HH:mm" from))
-  (fill (input "F_BisZeit") (t/format "HH:mm" to))
-  (input-text (input "F_PId") project)
-  (click (input "F_Aktual"))
-  (wait-until #(exists? (input "F_KAId")))
-  (fill "textarea[name='F_Text']" "via time-tracker")
-  (click (input "F_Speichern"))
-  (collect-error r))
+(defn record-entry [{:keys [project]} {:keys [::r/from ::r/to ::r/tz] :as r}]
+  (let [from-z (zoned-date-time from tz)
+        to-z (zoned-date-time to tz)]
+    (click (input "F_Reset"))
+    (wait-until #(not (exists? (input "F_KAId"))))
+    (fill (input "F_VonDat") (t/format "dd.MM.yyyy" from-z))
+    (fill (input "F_VonZeit") (t/format "HH:mm" from-z))
+    (fill (input "F_BisZeit") (t/format "HH:mm" to-z))
+    (input-text (input "F_PId") project)
+    (click (input "F_Aktual"))
+    (wait-until #(exists? (input "F_KAId")))
+    (fill "textarea[name='F_Text']" "via time-tracker")
+    (click (input "F_Speichern"))
+    (collect-error r)))
 
 ;;
 

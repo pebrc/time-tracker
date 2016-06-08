@@ -2,6 +2,7 @@
   (require [clojure.java.shell :refer [sh]]
            [clojure.string :as s]
            [java-time :as t]
+           [time-tracker.time :refer :all]
            [time-tracker.tracker :refer [time-data]]
            [time-tracker.store :as r])
   (import java.util.Date))
@@ -49,13 +50,6 @@
    (filter #(domains (:domain %)))
    (map assoc-secs)))
 
-(defn zoned-date-time [date tz]
-  (-> (t/instant date)
-      (t/zoned-date-time (t/zone-id tz))))
-
-(defn date [{:keys [date tz]}]
-  (-> (zoned-date-time date tz)
-      (t/truncate-to :days))) 
 
 (defn assoc-pkey [e]
   (assoc e :pkey (date e)))
