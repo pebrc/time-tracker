@@ -63,17 +63,19 @@
     wake -- midnight --- sleep"
   (let [neutral-el (fn [{:keys [date tz]}] {:state :unknown
                                             ::r/status :collected
-                                            ::r/tz tz})]
-    (reduce
-     (fn [{state :state last-from :last-from from ::r/from to ::r/to :as result} {:keys [date domain tz]}]
-       (condp = [state domain]
-         [:unknown :sleep] :>> (fn [_] (assoc result :state :sleep))
-         [:wake :sleep] :>> (fn [_] (assoc result ::r/to (if-not to date  (Date. (+ (.getTime to) (- (.getTime date) (.getTime last-from))))) :state :sleep))
-         [:unknown :wake] :>> (fn [_] (assoc result ::r/from date  :last-from date :state :wake))
-         [:sleep :wake] :>> (fn [_] (assoc result ::r/from (or from date) :last-from date  :state :wake))
-         result))
-     (neutral-el (first es))
-     es)))
+                                            ::r/tz tz})
+        +-diff (fn [a b c] (Date. (+ (.getTime a) (- (.getTime c) (.getTime b)))) )]
+    (-> (reduce
+          (fn [{state :state last-from :last-from from ::r/from to ::r/to :as result} {:keys [date domain tz]}]
+            (condp = [state domain]
+              [:unknown :sleep] :>> (fn [_] (assoc result :state :sleep))
+              [:wake :sleep] :>> (fn [_] (assoc result ::r/to (if-not to date (+-diff to last-from date) ) :state :sleep))
+              [:unknown :wake] :>> (fn [_] (assoc result ::r/from date  :last-from date :state :wake))
+              [:sleep :wake] :>> (fn [_] (assoc result ::r/from (or from date) :last-from date  :state :wake))
+              result))
+          (neutral-el (first es))
+          es)
+         (dissoc :state :last-from))))
 
 
 (defn aggregate [{:keys [tz]} {:keys [interval] }] 
