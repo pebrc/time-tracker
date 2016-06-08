@@ -60,12 +60,12 @@
   (assoc e :pkey (date e)))
 
 (defn to-record [es]
-  (let [neutral-el (fn [{:keys [date tz]}] {:r/from (zoned-date-time date tz)
-                                            :r/status :collected
-                                            :r/tz tz})]
+  (let [neutral-el (fn [{:keys [date tz]}] {::r/from (zoned-date-time date tz)
+                                            ::r/status :collected
+                                            ::r/tz tz})]
     (reduce
      (fn [result {:keys [date secs tz]}]
-       (update-in result [:r/to] #(t/plus (or % (zoned-date-time date tz))  (t/seconds secs))))
+       (update-in result [::r/to] #(t/plus (or % (zoned-date-time date tz))  (t/seconds secs))))
      (neutral-el (first es))
      es)))
 

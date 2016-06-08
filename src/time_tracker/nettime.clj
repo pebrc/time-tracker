@@ -1,6 +1,8 @@
 (ns time-tracker.nettime
   (require [clj-webdriver.taxi :refer :all]
-           [java-time :as t]))
+           [java-time :as t]
+           [clojure.tools.logging :as log]
+           [time-tracker.store :as r]))
 
 (defn input [name]
   (str "input[name='" name "']"))
@@ -26,23 +28,28 @@
 (defn error? []
   (exists? error-q))
 
-(defn collect-error []
+(defn collect-error [r]
   (if (error?)
-    {:error  (text error-q)}))
+    (assoc r :error (text error-q))
+    r))
 
-
-(defn record-entry [{:keys [project]} {:keys [from to]}]
-  (-> (input "F_VonDat")
+(defn fill [e v]
+  (-> e
       (clear)
-      (input-text  (t/format "dd.MM.yyyy" from)))
-  (input-text (input "F_VonZeit") (t/format "HH:mm" from))
-  (input-text (input "F_BisZeit") (t/format "HH:mm" to))
+      (input-text v)))
+
+(defn record-entry [{:keys [project]} {:keys [::r/from ::r/to] :as r}]
+  (click (input "F_Reset"))
+  (wait-until #(not (exists? (input "F_KAId"))))
+  (fill (input "F_VonDat") (t/format "dd.MM.yyyy" from))
+  (fill (input "F_VonZeit") (t/format "HH:mm" from))
+  (fill (input "F_BisZeit") (t/format "HH:mm" to))
   (input-text (input "F_PId") project)
-  (input-text "textarea[name='F_Text']" "via time-tracker")
   (click (input "F_Aktual"))
   (wait-until #(exists? (input "F_KAId")))
+  (fill "textarea[name='F_Text']" "via time-tracker")
   (click (input "F_Speichern"))
-  (collect-error))
+  (collect-error r))
 
 ;;
 
@@ -59,7 +66,7 @@
 
 (defn track [conf rs]
   (let [track (partial record-entry conf)]
-    (do-on-nettime conf #(doall (map track rs)))))
+    (do-on-nettime conf #(doall (map track rs))) ))
 
 
 ;;  (track conf sample)
