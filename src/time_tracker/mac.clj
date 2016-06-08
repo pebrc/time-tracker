@@ -3,7 +3,8 @@
            [clojure.string :as s]
            [java-time :as t]
            [time-tracker.tracker :refer [time-data]]
-           [time-tracker.store :as r]))
+           [time-tracker.store :as r])
+  (import java.util.Date))
 
 (defn raw []
   (let [res (sh "pmset" "-g" "log")]
@@ -68,15 +69,14 @@
     wake -- midnight --- sleep"
   (let [neutral-el (fn [{:keys [date tz]}] {:state :unknown
                                             ::r/status :collected
-                                            ::r/tz tz})
-        plus-time-between  (fn [a b] (t/plus a (t/millis (t/time-between a b :millis))))]
+                                            ::r/tz tz})]
     (reduce
      (fn [{state :state last-from :last-from from ::r/from to ::r/to :as result} {:keys [date domain tz]}]
        (condp = [state domain]
          [:unknown :sleep] :>> (fn [_] (assoc result :state :sleep))
-         [:wake :sleep] :>> (fn [_] (assoc result ::r/to (if-not to (zoned-date-time date tz) (t/plus to (t/millis (t/time-between last-from (zoned-date-time date tz) :millis)))) :state :sleep))
-         [:unknown :wake] :>> (fn [_] (assoc result ::r/from (zoned-date-time date tz) :last-from (zoned-date-time date tz) :state :wake))
-         [:sleep :wake] :>> (fn [_] (assoc result ::r/from (or from (zoned-date-time date tz)) :last-from (zoned-date-time date tz) :state :wake))
+         [:wake :sleep] :>> (fn [_] (assoc result ::r/to (if-not to date  (Date. (+ (.getTime to) (- (.getTime date) (.getTime last-from))))) :state :sleep))
+         [:unknown :wake] :>> (fn [_] (assoc result ::r/from date  :last-from date :state :wake))
+         [:sleep :wake] :>> (fn [_] (assoc result ::r/from (or from date) :last-from date  :state :wake))
          result))
      (neutral-el (first es))
      es)))
