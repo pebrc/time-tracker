@@ -59,19 +59,31 @@
 (defn assoc-pkey [e]
   (assoc e :pkey (date e)))
 
+(defn update-vals [m kfs]
+  (reduce (fn [acc [k f]] (update-in [k] f)) m))
+
+
 (defn to-record [es]
-  (let [neutral-el (fn [{:keys [date tz]}] {::r/from (zoned-date-time date tz)
+  "Ignores activity across day boundary e.g.
+    wake -- midnight --- sleep"
+  (let [neutral-el (fn [{:keys [date tz]}] {:state :unknown
                                             ::r/status :collected
-                                            ::r/tz tz})]
+                                            ::r/tz tz})
+        plus-time-between  (fn [a b] (t/plus a (t/millis (t/time-between a b :millis))))]
     (reduce
-     (fn [result {:keys [date secs tz]}]
-       (update-in result [::r/to] #(t/plus (or % (zoned-date-time date tz))  (t/seconds secs))))
+     (fn [{state :state last-from :last-from from ::r/from to ::r/to :as result} {:keys [date domain tz]}]
+       (condp = [state domain]
+         [:unknown :sleep] :>> (fn [_] (assoc result :state :sleep))
+         [:wake :sleep] :>> (fn [_] (assoc result ::r/to (if-not to (zoned-date-time date tz) (t/plus to (t/millis (t/time-between last-from (zoned-date-time date tz) :millis)))) :state :sleep))
+         [:unknown :wake] :>> (fn [_] (assoc result ::r/from (zoned-date-time date tz) :last-from (zoned-date-time date tz) :state :wake))
+         [:sleep :wake] :>> (fn [_] (assoc result ::r/from (or from (zoned-date-time date tz)) :last-from (zoned-date-time date tz) :state :wake))
+         result))
      (neutral-el (first es))
      es)))
 
+
 (defn aggregate [{:keys [tz]} {:keys [interval] }] 
   (comp
-   (filter #(= :wake (:domain %)))
    (map #(assoc % :tz tz))
    (map assoc-pkey)
    (filter #(t/contains? interval (:pkey %)))
@@ -80,11 +92,13 @@
 
 
 
-(def sample
- (into [] parse  (->> (raw)
-                     (s/split-lines))) )
+;; (def sample
+;;  (into [] parse  (->> (raw)
+;;                       (s/split-lines))) )
 
-;(into [] (aggregate {:tz "Europe/Vienna} {  (t/interval (t/zoned-date-time 2016 06 03) (t/zoned-date-time 2016 06 06))}) sample)
+
+;(into [] (aggregate {:tz "Europe/Vienna"} { :interval (t/interval (t/zoned-date-time 2016 6 3) (t/zoned-date-time 2016 6 9)) }) sample)
+
 
 (defmethod time-data "Mac OS X" [env c params]
   (into []
