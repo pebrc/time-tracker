@@ -9,8 +9,7 @@
   {:error (str  "no time-date implementation for " env)})
 
 (defn to-params [stored]
-  {:interval(t/interval (t/zoned-date-time 1970 1) (t/zoned-date-time))
-                                        ; (t/interval (t/zoned-date-time 1970 1) (t/minus (t/zoned-date-time) (t/days 1)))
+  {:interval (t/interval (t/zoned-date-time 1970 1) (t/minus (t/zoned-date-time) (t/days 1)))
    })
 
 (defn track [conf]

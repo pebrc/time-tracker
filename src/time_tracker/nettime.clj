@@ -31,13 +31,17 @@
 
 (defn collect-error [r]
   (if (error?)
-    (assoc r :error (text error-q))
-    r))
+    (assoc r ::r/message (text error-q) ::r/status :error)
+    (assoc r ::r/status :tracked)))
 
 (defn fill [e v]
   (-> e
       (clear)
       (input-text v)))
+
+(defn de-select [e]
+  (if (selected? (element e))
+    (click e)))
 
 (defn record-entry [{:keys [project]} {:keys [::r/from ::r/to ::r/tz] :as r}]
   (let [from-z (zoned-date-time from tz)
@@ -50,11 +54,14 @@
     (input-text (input "F_PId") project)
     (click (input "F_Aktual"))
     (wait-until #(exists? (input "F_KAId")))
+    (de-select "input[type='checkbox'][name='F_Pausebuchen']")
     (fill "textarea[name='F_Text']" "via time-tracker")
     (click (input "F_Speichern"))
     (collect-error r)))
 
-;;
+
+
+
 
 ;;(def sample [{:date #inst "2016-06-01" :from "09:00" :to "17:00"}])
 
