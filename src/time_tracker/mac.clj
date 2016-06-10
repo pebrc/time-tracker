@@ -1,6 +1,7 @@
 (ns time-tracker.mac
   (require [clojure.java.shell :refer [sh]]
            [clojure.string :as s]
+           [clojure.tools.logging :as log]
            [java-time :as t]
            [time-tracker.time :refer :all]
            [time-tracker.tracker :refer [time-data]]
@@ -66,16 +67,17 @@
                                             ::r/tz tz})
         +-diff (fn [a b c] (Date. (+ (.getTime a) (- (.getTime c) (.getTime b)))) )]
     (-> (reduce
-          (fn [{state :state last-from :last-from from ::r/from to ::r/to :as result} {:keys [date domain tz]}]
-            (condp = [state domain]
-              [:unknown :sleep] :>> (fn [_] (assoc result :state :sleep))
-              [:wake :sleep] :>> (fn [_] (assoc result ::r/to (if-not to date (+-diff to last-from date) ) :state :sleep))
-              [:unknown :wake] :>> (fn [_] (assoc result ::r/from date  :last-from date :state :wake))
-              [:sleep :wake] :>> (fn [_] (assoc result ::r/from (or from date) :last-from date  :state :wake))
-              result))
-          (neutral-el (first es))
-          es)
-         (dissoc :state :last-from))))
+         (fn [{state :state last-from :last-from from ::r/from to ::r/to :as result} {:keys [date domain tz]}]
+           (condp = [state domain]
+             [:unknown :sleep] :>> (fn [_] (assoc result :state :sleep))
+             [:wake :sleep] :>> (fn [_] (assoc result ::r/to (if-not to date (+-diff to last-from date) ) :state :sleep))
+             [:unknown :wake] :>> (fn [_] (assoc result ::r/from date  :last-from date :state :wake))
+             [:sleep :wake] :>> (fn [_] (assoc result ::r/from (or from date) :last-from date  :state :wake))
+             result))
+         (neutral-el (first es))
+         es)
+        (dissoc :state :last-from))
+    ))
 
 
 (defn aggregate [{:keys [tz] :or {tz (.getId (t/zone-id))}} {:keys [interval] }]
@@ -84,7 +86,8 @@
    (map assoc-pkey)
    (filter #(t/contains? interval (:pkey %)))
    (partition-by :pkey)
-   (map to-record)))
+   (map to-record)
+   (filter #(not (nil? (::r/from %))))))
 
 
 
@@ -93,15 +96,17 @@
 ;;                       (s/split-lines))) )
 
 
-;(into [] (aggregate {:tz "Europe/Vienna"} { :interval (t/interval (t/zoned-date-time 2016 6 3) (t/zoned-date-time 2016 6 9)) }) sample)
+;; (into [] (aggregate {:tz "Europe/Vienna"} { :interval (t/interval (t/zoned-date-time 2015 5 3) (t/zoned-date-time 2016 5 30)) }) sample)
 
 
 (defmethod time-data "Mac OS X" [env c params]
-  (into []
-        (comp parse
-              (aggregate c params))
-        (->> (raw)
-             (s/split-lines))))
+  (let [res  (into []
+                   (comp parse
+                         (aggregate c params))
+                   (->> (raw)
+                        (s/split-lines)))
+        _ (log/debug res)]
+    res))
 
 
 
