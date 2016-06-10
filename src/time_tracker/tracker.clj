@@ -13,16 +13,18 @@
   {:interval (t/interval (t/zoned-date-time 1970 1) (t/minus (t/zoned-date-time) (t/days 1)))
    })
 
-(defn validate [data]
+(defn validate [msg data]
   (if-let [errors (spec/explain-data ::s/store data)]
-    (throw (ex-info "Invalid data collected" errors))
+    (throw (ex-info msg errors))
     data))
 
 (defn track [conf]
   (let [stored  (s/read-store conf)]
     (->> (to-params stored)
          (time-data (System/getProperty "os.name") conf )
-         (validate )
+         (validate "invalid data collected")
+         (s/merge-stores (filter #(= :collected (::s/status %)) stored));;try to track previously collected data
+         (validate "merged date invalid")
          (nettime/track conf);;this could be pluggable as well
          (s/merge-stores stored)
          (s/write-store conf))))

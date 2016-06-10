@@ -75,7 +75,8 @@
       result)))
 
 (defn track [conf rs]
-  (let [track (partial record-entry conf)]
+  (let [track (partial record-entry conf)
+        _ (log/debug rs)]
     (do-on-nettime conf #(doall (map track rs))) ))
 
 
