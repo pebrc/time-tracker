@@ -78,7 +78,7 @@
          (dissoc :state :last-from))))
 
 
-(defn aggregate [{:keys [tz]} {:keys [interval] }] 
+(defn aggregate [{:keys [tz] :or {tz (.getId (t/zone-id))}} {:keys [interval] }]
   (comp
    (map #(assoc % :tz tz))
    (map assoc-pkey)
