@@ -1,6 +1,7 @@
 (ns time-tracker.tracker
   (require [time-tracker.store :as s]
            [time-tracker.nettime :as nettime]
+           [time-tracker.time :refer :all]
            [clojure.spec :as spec]
            [java-time :as t]))
 
@@ -10,8 +11,9 @@
   {:error (str  "no time-date implementation for " env)})
 
 (defn to-params [stored]
-  {:interval (t/interval (t/zoned-date-time 1970 1) (t/minus (t/zoned-date-time) (t/days 1)))
-   })
+  (let [{:keys [::s/from ::s/tz]}  (last (sort-by ::s/from stored))
+        start   (if from  (zoned-date-time from tz) (t/zoned-date-time 1970 1))]
+    {:interval  (t/interval start (t/minus (t/zoned-date-time) (t/days 1)))}))
 
 (defn validate [msg data]
   (if-let [errors (spec/explain-data ::s/store data)]
