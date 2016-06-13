@@ -1,5 +1,6 @@
 (ns time-tracker.store
   (require [clojure.spec :as s]
+           [clojure.tools.logging :as log]
            [java-time :as t]
            [time-tracker.io :as io])
   (import java.util.Date))
@@ -21,7 +22,7 @@
   (let [merged (->> (apply concat store stores)
                     (reduce #(assoc %1 (::from %2) %2) {})
                     (vals))
-        _ (println merged)]
+        _ (log/debug (str "Merged data stores: " merged))]
     merged))
 
 ;; (def sample [{::from #inst "2016-06-05T10:06:12+02:00", ::status :collected, ::tz "Europe/Vienna" ::to #inst "2016-06-05T17:48:26+02:00", :error "Die eingegebene Zeit überschneidet sich mit einer bereits erfassten Zeit!"} {::from #inst "2016-06-06T18:19:10+02:00", ::status :collected, ::tz "Europe/Vienna" ::to #inst "2016-06-06T19:06:10+02:00", :error "Entweder Pausenzeiten korrigieren, Checkbox automatisch Pause buchen  wegklicken oder Zeit von/bis korrigieren!"}])

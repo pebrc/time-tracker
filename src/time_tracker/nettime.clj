@@ -79,10 +79,9 @@
 
 (defn track [conf rs]
   (let [track (partial record-entry conf)
-        _ (log/debug rs)]
+        _ (log/info (str "Tracking: " rs))]
     (do-on-nettime conf #(doall (map track rs))) ))
 
 
-;;  (track conf sample)
 
 
