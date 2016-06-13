@@ -8,10 +8,13 @@
            [clojure.java.io :as io])
   (:gen-class))
 
+(defn config-exists [f]
+  (and (not (nil? f)) (.exists (io/as-file f))))
 
 (def cli-options
   [["-c" "--config filename" "config file"
-    :validate [#(.exists (io/as-file %)) "must be an existing file"]]
+    :default "config.edn"
+    :validate [config-exists "must be an existing file"]]
    ["-h" "--help"]])
 
 
@@ -40,8 +43,8 @@
   (let [{:keys [options arguments errors summary]} (parse-opts args cli-options)]
     (cond
       (:help options) (exit 0 (usage summary))
-      (not (.exists (io/as-file (:config options)))) (exit 1 (error-msg ["No a valid file" (usage summary)]))
-      errors (exit 1 (error-msg errors)))
+      errors (exit 1 (error-msg errors))
+      (not (config-exists (:config options))) (exit 1 (usage summary)))
     (log/debug options)
     (log/debug arguments)
     (t/track (c/conf (:config options)))))
