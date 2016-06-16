@@ -12,10 +12,12 @@
 
 
 
+(def defaults {:tz (.getId (t/zone-id))})
+
 (defn conf
   ([]
    (conf "config.edn"))
   ([f]
    (let [c (io/read-edn f)]
      (if (s/valid? ::config c)
-       c))))
+       (merge defaults c)))))

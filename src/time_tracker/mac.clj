@@ -80,7 +80,7 @@
     ))
 
 
-(defn aggregate [{:keys [tz] :or {tz (.getId (t/zone-id))}} {:keys [interval] }]
+(defn aggregate [{:keys [tz]} {:keys [interval] }]
   (comp
    (map #(assoc % :tz tz))
    (map assoc-pkey)
