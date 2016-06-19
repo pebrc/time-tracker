@@ -12,7 +12,7 @@
 (s/def ::project (s/and string? #(re-matches project-regex %)) )
 (s/def ::config (s/keys :req-un [::user ::pw ::project]
                         :opt-un [:trime-tracker.store/tz
-                                 :::algo]))
+                                 ::algo]))
 
 
 

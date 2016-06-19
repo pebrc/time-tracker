@@ -12,8 +12,8 @@
   {:error (str  "no time-date implementation for " env)})
 
 
-(defn to-params [stored]
-  (let [{:keys [::s/from ::s/tz] :as prev}  (last (sort-by ::s/from stored))
+(defn to-params [stored {:keys [tz]}]
+  (let [{:keys [::s/from] :as prev}  (last (sort-by ::s/from stored))
         epoch (t/zoned-date-time 1970 1)
         prev-to   (if from
                     (zoned-date-time from tz)
@@ -35,7 +35,7 @@
 
 (defn track [conf]
   (let [stored  (s/read-store conf)]
-    (->> (to-params stored)
+    (->> (to-params stored conf)
          (time-data (System/getProperty "os.name") conf )
          (validate "invalid data collected")
          (s/merge-stores (filter #(= :collected (::s/status %)) stored));;try to track previously collected data
