@@ -1,36 +1,38 @@
 # time-tracker
 
-FIXME: description
+Tracks time worked based on you machine's power management log.
 
 ## Installation
 
 Download from http://example.com/FIXME.
 
+## Build
+    lein uberjar
+
 ## Usage
 
-FIXME: explanation
+    
 
     $ java -jar time-tracker-0.1.0-standalone.jar [args]
 
 ## Options
 
-FIXME: listing of options this app accepts.
+* `-c config` a edn config file containing
+    the keys
+    * `:user` nettime user name
+    * `:pw` nettime password
+    * `:project` the project your are tracking time for
 
-## Examples
+    optional:
+    * `:algo` one of:
+      * `:accumulate`: aggregate all wake periods into a continuos entry
+      * `:exact` track all individual sleep/wake periods as they happened
+      * `:maximise` (default) start the entry with the first wake event of the day and end it with the last sleep event 
 
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
 
 ## License
 
-Copyright © 2016 FIXME
+Copyright © 2016 Peter Brachwitz
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
