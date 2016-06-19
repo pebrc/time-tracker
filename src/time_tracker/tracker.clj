@@ -21,12 +21,10 @@
         next  (-> prev-to
                   (t/truncate-to :days)
                   (t/plus (t/days 1)))
-        yesterday (t/minus (date (t/instant) tz) (t/days 1))
-        iv (if-not (t/after? yesterday next)
-             [epoch (t/plus epoch (t/millis 1))]
-             [next yesterday])        
-        _ (println iv)
-        
+        yesterday (date (t/instant) tz) 
+        iv (if (or (= yesterday next) (t/after? yesterday next))
+             [next yesterday]
+             [epoch (t/plus epoch (t/millis 1))])        
         _ (log/info (str "Collecting between " iv))]
     {:interval  (t/interval (first iv) (second iv))}))
 
