@@ -44,5 +44,5 @@
          (s/merge-stores stored)
          (s/write-store conf))))
 
-;(time-data "Mac OS X" {:tz "Europe/Vienna"} { :interval (t/interval (t/zoned-date-time 2016 06 03) (t/zoned-date-time 2016 06 06))})
+;(time-data "Mac OS X" {:tz "Europe/Vienna" :algo :exact} { :interval (t/interval (t/zoned-date-time 2016 06 16) (t/zoned-date-time 2016 06 18))})
 

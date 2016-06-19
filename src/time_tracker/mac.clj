@@ -61,7 +61,7 @@
 (defn accumulate [es]
     "Ignores activity across day boundary e.g.
     wake -- midnight --- sleep"
-  (let [neutral-el (fn [{:keys [date tz]}] {:state :unknown
+  (let [neutral-el (fn [{:keys [tz]}] {:state :unknown
                                             ::r/status :collected
                                             ::r/tz tz})
         +-diff (fn [a b c] (Date. (+ (.getTime a) (- (.getTime c) (.getTime b)))) )]
@@ -75,11 +75,25 @@
              result))
          (neutral-el (first es))
          es)
-        (dissoc :state :last-from))
-    ))
+        (dissoc :state :last-from)
+        (vector))))
+
 
 (defn exact [es]
-  {})
+  (let [neutral-el (fn [{:keys [tz]}] [{:state :unknown
+                                         ::r/status :collected
+                                        ::r/tz tz} []])]
+    (->> (reduce
+          (fn [[{state :state  from ::r/from  :as cur} acc] {:keys [date domain tz]}]
+            (condp = [state domain]
+              [:unknown :sleep] :>> (fn [_] [(assoc cur :state :sleep) acc])
+              [:wake :sleep] :>> (fn [_] [(assoc cur :state :sleep) (conj acc (assoc cur ::r/to date))])
+              [:unknown :wake] :>> (fn [_] [(assoc cur ::r/from date  :state :wake) acc])
+              [:sleep :wake] :>> (fn [_] [(assoc cur ::r/from date :state :wake) acc])
+              [cur acc]))
+          (neutral-el (first es))
+          es)
+         (second))))
 
 
 (defn maximise [es]
@@ -96,7 +110,8 @@
              result))
          (neutral-el (first es))
          es)
-        (dissoc :state ))))
+        (dissoc :state )
+        (vector))))
 
 (defn to-record [algo]
   (case algo
@@ -111,18 +126,12 @@
    (map assoc-pkey)
    (filter #(t/contains? interval (:pkey %)))
    (partition-by :pkey)
-   (map (to-record algo))
+   (mapcat (to-record algo))
    (filter #(not (nil? (::r/from %))))))
-
-
 
 ;; (def sample
 ;;  (into [] parse  (->> (raw)
 ;;                       (s/split-lines))) )
-
-
-;; (into [] (aggregate {:tz "Europe/Vienna"} { :interval (t/interval (t/zoned-date-time 2015 5 3) (t/zoned-date-time 2016 5 30)) }) sample)
-
 
 (defmethod time-data "Mac OS X" [env c params]
   (let [res  (into []
@@ -135,3 +144,5 @@
 
 
 
+
+; (time-data "Mac OS X" {:tz "Europe/Vienna" :algo :exact} { :interval (t/interval (t/zoned-date-time 2016 06 16) (t/zoned-date-time 2016 06 18))})q
