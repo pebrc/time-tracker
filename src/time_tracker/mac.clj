@@ -58,9 +58,8 @@
 (defn update-vals [m kfs]
   (reduce (fn [acc [k f]] (update-in [k] f)) m))
 
-
-(defn to-record [es]
-  "Ignores activity across day boundary e.g.
+(defn accumulate [es]
+    "Ignores activity across day boundary e.g.
     wake -- midnight --- sleep"
   (let [neutral-el (fn [{:keys [date tz]}] {:state :unknown
                                             ::r/status :collected
@@ -79,14 +78,40 @@
         (dissoc :state :last-from))
     ))
 
+(defn exact [es]
+  {})
 
-(defn aggregate [{:keys [tz]} {:keys [interval] }]
+
+(defn maximise [es]
+  (let [neutral-el (fn [{:keys [date tz]}] {:state :unknown
+                                            ::r/status :collected
+                                            ::r/tz tz})]
+    (-> (reduce
+         (fn [{state :state  from ::r/from  :as result} {:keys [date domain tz]}]
+           (condp = [state domain]
+             [:unknown :sleep] :>> (fn [_] (assoc result :state :sleep))
+             [:wake :sleep] :>> (fn [_] (assoc result ::r/to date :state :sleep))
+             [:unknown :wake] :>> (fn [_] (assoc result ::r/from date  :state :wake))
+             [:sleep :wake] :>> (fn [_] (assoc result ::r/from (or from date)  :state :wake))
+             result))
+         (neutral-el (first es))
+         es)
+        (dissoc :state ))))
+
+(defn to-record [algo]
+  (case algo
+    :accumulate accumulate
+    :exact exact
+    maximise ))
+
+
+(defn aggregate [{:keys [tz algo]} {:keys [interval] }]
   (comp
    (map #(assoc % :tz tz))
    (map assoc-pkey)
    (filter #(t/contains? interval (:pkey %)))
    (partition-by :pkey)
-   (map to-record)
+   (map (to-record algo))
    (filter #(not (nil? (::r/from %))))))
 
 
