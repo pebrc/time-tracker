@@ -14,10 +14,9 @@
                         :opt-un [:trime-tracker.store/tz
                                  ::algo]))
 
-
-
 (def defaults {:tz (.getId (t/zone-id))
-               :algo :maximize})
+               :algo :maximize
+               :data-dir (str (System/getProperty "user.dir") "/.time-tracker")})
 
 (defn conf
   ([]

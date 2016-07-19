@@ -36,13 +36,13 @@
 
 
 
-(def default-data-dir (str (System/getProperty "user.dir") "/.time-tracker") )
+
 (def store-tail "tail.edn")
 (defn store-file [dir]
   (str dir "/" store-tail))
 
 
-(defn read-store [{:keys [data-dir] :or {data-dir default-data-dir}}]
+(defn read-store [{:keys [data-dir]}]
   (let [store (store-file data-dir)
         data  (if (io/exists? store) (io/read-edn store) [])
         errors (s/explain-data ::store data)]
@@ -50,7 +50,7 @@
       (throw (ex-info "Invalid data in store" errors))
       data)))
 
-(defn write-store [{:keys [data-dir] :or {data-dir default-data-dir}} data]
+(defn write-store [{:keys [data-dir]} data]
   (io/write-edn data (store-file data-dir)))
 
 
