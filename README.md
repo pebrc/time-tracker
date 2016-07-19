@@ -4,7 +4,9 @@ Tracks time worked based on you machine's power management log.
 
 ## Installation
 
-Download from http://example.com/FIXME.
+* Binaries currently not available
+* Requires PhantomJs 2.1 on the PATH (tested with 2.1.1)
+
 
 ## Build
     lein uberjar
