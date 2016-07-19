@@ -10,15 +10,17 @@
 
 (defn login [{:keys [user pw url] :or {url "https://nettime.brainforce.com/"}}]
   (to url)
+  (wait-until #(exists? "frame[name='workframe']"))
   (switch-to-frame "frame[name='workframe']")
   (input-text (input "F_UNr") user)
-  (select-by-text "select[name='F_MandantenNr'" "SD")
+  (select-by-text "select[name='F_MandantenNr']" "SD")
   (input-text (input "F_Passwort") pw)
   (click (input "F_Login"))
   (implicit-wait 3000)
   (wait-until #(exists? (input "F_UId"))))
 
-(defn logoff []
+(defn logoff [{:keys [data-dir]}]
+  (take-screenshot :file (str data-dir "/lastrun.png"))
   (switch-to-default)
   (switch-to-frame "frame[name='menuframe']")
   (click "a[href*='nt_abmelden.asp']"))
@@ -70,10 +72,10 @@
 
 (defn do-on-nettime [conf op]
   (do
-    (set-driver! {:browser :firefox})
+    (set-driver! {:browser :phantomjs})
     (login conf)
     (let [result (op)]
-      (logoff)
+      (logoff conf)
       (quit)
       result)))
 
