@@ -12,7 +12,10 @@
                  [clojure.java-time "0.2.0"]
                  [org.threeten/threeten-extra "0.9"]
                  [org.clojure/tools.logging "0.3.1"]
-                 [ch.qos.logback/logback-classic "1.1.7"]]
+                 [org.slf4j/slf4j-api "1.7.21"]
+                 [ch.qos.logback/logback-classic "1.1.7"]
+                 [org.slf4j/jul-to-slf4j "1.7.21"]]
+  
   :main ^:skip-aot time-tracker.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})

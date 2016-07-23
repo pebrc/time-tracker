@@ -4,6 +4,7 @@
            [time-tracker.mac :as mac]
            [clojure.tools.cli :refer [parse-opts]]
            [clojure.tools.logging :as log]
+           [time-tracker.log :as logger]
            [clojure.string :as string]
            [clojure.java.io :as io])
   (:gen-class))
@@ -45,6 +46,7 @@
       (:help options) (exit 0 (usage summary))
       errors (exit 1 (error-msg errors))
       (not (config-exists (:config options))) (exit 1 (usage summary)))
+    (logger/init)
     (log/debug options)
     (log/debug arguments)
     (t/track (c/conf (:config options)))))

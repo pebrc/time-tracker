@@ -1,9 +1,12 @@
 (ns time-tracker.nettime
   (require [clj-webdriver.taxi :refer :all]
+           [clj-webdriver.driver :refer [init-driver]]
            [java-time :as t]
            [clojure.tools.logging :as log]
            [time-tracker.store :as r]
-           [time-tracker.time :refer :all]))
+           [time-tracker.time :refer :all])
+  (:import (org.openqa.selenium.phantomjs PhantomJSDriver)
+           (org.openqa.selenium.remote DesiredCapabilities)))
 
 (defn input [name]
   (str "input[name='" name "']"))
@@ -66,13 +69,31 @@
 
 
 
+(defn log-level []
+  (cond
+    (log/enabled? :trace) "DEBUG"
+    (log/enabled? :debug) "DEBUG"
+    (log/enabled? :info) "INFO"
+    (log/enabled? :warn) "WARN"
+    (log/enabled? :error) "ERROR"
+    (log/enabled? :fatal) "ERROR"))
+
+(defn phantom-webdriver
+  "custom webdriver constructor to set phantom/ghostdriver capabilities"
+  []
+  (let [level (log-level)]
+    {:webdriver
+     (PhantomJSDriver. (doto (DesiredCapabilities.)
+                         (.setCapability "phantomjs.cli.args" (into-array String [(str "--webdriver-loglevel=" level)]))
+                         (.setCapability "phantomjs.ghostdriver.cli.args" (into-array String [(str "--logLevel=" level)]))))}))
+
 
 
 ;;(def sample [{:date #inst "2016-06-01" :from "09:00" :to "17:00"}])
 
 (defn do-on-nettime [conf op]
   (do
-    (set-driver! {:browser :phantomjs})
+    (set-driver! (init-driver (phantom-webdriver)))
     (login conf)
     (let [result (op)]
       (logoff conf)
