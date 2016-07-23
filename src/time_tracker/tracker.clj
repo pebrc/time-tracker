@@ -17,7 +17,7 @@
 
 
 (defn to-params [stored {:keys [tz]}]
-  (let [{:keys [::s/from] :as prev}  (last (sort-by ::s/from stored))
+  (let [{:keys [::s/from] :as prev}  (last stored)
         epoch (t/zoned-date-time 1970 1)
         prev-to   (if from
                     (zoned-date-time from tz)

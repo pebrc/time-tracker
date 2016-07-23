@@ -48,9 +48,9 @@
         errors (s/explain-data ::store data)]
     (if errors
       (throw (ex-info "Invalid data in store" errors))
-      data)))
+      (sort-by ::s/from data))))
 
 (defn write-store [{:keys [data-dir]} data]
-  (io/write-edn data (store-file data-dir) true))
+  (io/write-edn (sort-by ::s/from data) (store-file data-dir) true))
 
 
