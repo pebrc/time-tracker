@@ -51,6 +51,6 @@
       data)))
 
 (defn write-store [{:keys [data-dir]} data]
-  (io/write-edn data (store-file data-dir)))
+  (io/write-edn data (store-file data-dir) true))
 
 
