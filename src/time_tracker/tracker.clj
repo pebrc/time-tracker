@@ -8,6 +8,10 @@
 
 (defmulti time-data (fn [env cfg params] env))
 
+(defmethod time-data :noop [env c params]
+  (log/info "no automatic activity collection")
+  [])
+
 (defmethod time-data :default [env c params]
   {:error (str  "no time-date implementation for " env)})
 
@@ -33,10 +37,24 @@
     (throw (ex-info msg errors))
     data))
 
-(defn track [conf]
+(defn platform-name [{:keys [manual-collection]}]
+  (if manual-collection
+    :noop
+    (System/getProperty "os.name")))
+
+(defn track
+ "t time data
+  s stored data
+  m merge t s
+  v validate m
+  t track v
+  m2 merge s t
+  w write m2
+  "
+  [conf]
   (let [stored  (s/read-store conf)]
     (->> (to-params stored conf)
-         (time-data (System/getProperty "os.name") conf )
+         (time-data (platform-name conf) conf )
          (validate "invalid data collected")
          (s/merge-stores (filter #(= :collected (::s/status %)) stored));;try to track previously collected data
          (validate "merged date invalid")
