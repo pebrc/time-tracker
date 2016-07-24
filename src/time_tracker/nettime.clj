@@ -70,13 +70,14 @@
 
 
 (defn log-level []
-  (cond
-    (log/enabled? :trace) "DEBUG"
-    (log/enabled? :debug) "DEBUG"
-    (log/enabled? :info) "INFO"
-    (log/enabled? :warn) "WARN"
-    (log/enabled? :error) "ERROR"
-    (log/enabled? :fatal) "ERROR"))
+  (let [ns 'time-tracker.nettime.impl ]
+    (cond
+      (log/enabled? :trace ns) "DEBUG"
+      (log/enabled? :debug ns) "DEBUG"
+      (log/enabled? :info ns) "INFO"
+      (log/enabled? :warn ns) "WARN"
+      (log/enabled? :error ns) "ERROR"
+      (log/enabled? :fatal ns) "ERROR")))
 
 (defn phantom-webdriver
   "custom webdriver constructor to set phantom/ghostdriver capabilities"

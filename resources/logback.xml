@@ -9,7 +9,7 @@
   </appender>
 
   <logger name="org.openqa.selenium.phantomjs" level="WARN" />
-  <logger name="time-tracker.nettime" level="WARN" />
+  <logger name="time-tracker.nettime.impl" level="WARN" />
 
   <root level="info">
     <appender-ref ref="STDOUT" />
