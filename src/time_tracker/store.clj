@@ -51,6 +51,8 @@
       (sort-by ::s/from data))))
 
 (defn write-store [{:keys [data-dir]} data]
-  (io/write-edn (sort-by ::s/from data) (store-file data-dir) true))
+  (let [d (sort-by ::s/from data)]
+    (io/write-edn d (store-file data-dir) true)
+    d))
 
 
