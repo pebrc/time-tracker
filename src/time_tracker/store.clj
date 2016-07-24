@@ -48,10 +48,10 @@
         errors (s/explain-data ::store data)]
     (if errors
       (throw (ex-info "Invalid data in store" errors))
-      (sort-by ::s/from data))))
+      (sort-by ::from data))))
 
 (defn write-store [{:keys [data-dir]} data]
-  (let [d (sort-by ::s/from data)]
+  (let [d (sort-by ::from data)]
     (io/write-edn d (store-file data-dir) true)
     d))
 
