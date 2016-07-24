@@ -48,8 +48,8 @@ If you prefer you can control the time data tracked and disable automatic collec
 
 The format is called [edn](https://github.com/edn-format/edn).
 
-    * Timezone information will be used when entering the tracked time into nettime and does not necessarily have to be the same as in `from` and `to`.
-    * The status value will change after tracking to either `:tracked` or `:error`
+* Timezone information will be used when entering the tracked time into nettime and does not necessarily have to be the same as in `from` and `to`.
+* The status value will change after tracking to either `:tracked` or `:error`
 
 ## License
 
