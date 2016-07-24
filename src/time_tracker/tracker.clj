@@ -37,7 +37,7 @@
     (throw (ex-info msg errors))
     data))
 
-(defn platform-name [{:keys [manual-collection]}]
+(defn collection-type [{:keys [manual-collection]}]
   (if manual-collection
     :noop
     (System/getProperty "os.name")))
@@ -54,7 +54,7 @@
   [conf]
   (let [stored  (s/read-store conf)]
     (->> (to-params stored conf)
-         (time-data (platform-name conf) conf )
+         (time-data (collection-type conf) conf )
          (validate "invalid data collected")
          (s/merge-stores (filter #(= :collected (::s/status %)) stored));;try to track previously collected data
          (validate "merged date invalid")
