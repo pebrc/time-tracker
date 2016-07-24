@@ -49,4 +49,6 @@
     (logger/init)
     (log/debug options)
     (log/debug arguments)
-    (t/track (c/conf (:config options)))))
+    (try 
+      (t/track (c/conf (:config options)))
+      (catch Exception e (log/error e)))))
