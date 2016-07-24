@@ -4,7 +4,8 @@
            [time-tracker.time :refer :all]
            [clojure.spec :as spec]
            [java-time :as t]
-           [clojure.tools.logging :as log]))
+           [clojure.tools.logging :as log]
+           [clojure.string :as str]))
 
 (defmulti time-data (fn [env cfg params] env))
 
@@ -29,7 +30,7 @@
         iv (if (or (= yesterday next) (t/after? yesterday next))
              [next yesterday]
              [epoch (t/plus epoch (t/millis 1))])        
-        _ (log/info (str "Collecting between " iv))]
+        _ (log/info (str "collecting between " (str/join " and " (map (partial t/format "E yyyy-MM-dd HH:mm") iv))))]
     {:interval  (t/interval (first iv) (second iv))}))
 
 (defn validate [msg data]
