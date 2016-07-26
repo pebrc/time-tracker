@@ -18,4 +18,5 @@
   
   :main ^:skip-aot time-tracker.core
   :target-path "target/%s"
+  :dev {:resource-paths ["dev-resources"]}
   :profiles {:uberjar {:aot :all}})

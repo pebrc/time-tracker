@@ -98,6 +98,7 @@
 
 (defn maximise [es]
   (let [neutral-el (fn [{:keys [date tz]}] {:state :unknown
+                                            ::r/to (t/to-java-date (t/adjust (zoned-date-time date tz) (t/local-time 23 59 59)))
                                             ::r/status :collected
                                             ::r/tz tz})]
     (-> (reduce
@@ -129,9 +130,6 @@
    (mapcat (to-record algo))
    (filter #(not (nil? (::r/from %))))))
 
-;; (def sample
-;;  (into [] parse  (->> (raw)
-;;                       (s/split-lines))) )
 
 (defmethod time-data "Mac OS X" [env c params]
   (let [res  (into []
@@ -145,4 +143,3 @@
 
 
 
-; (time-data "Mac OS X" {:tz "Europe/Vienna" :algo :exact} { :interval (t/interval (t/zoned-date-time 2016 06 16) (t/zoned-date-time 2016 06 18))})q
