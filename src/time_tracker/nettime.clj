@@ -81,12 +81,15 @@
 
 (defn phantom-webdriver
   "custom webdriver constructor to set phantom/ghostdriver capabilities"
-  []
-  (let [level (log-level)]
+  [{:keys [data-dir]}]
+  (let [level (log-level)
+        logfile (str data-dir "/phantomjsdriver.log")]
     {:webdriver
      (PhantomJSDriver. (doto (DesiredCapabilities.)
-                         (.setCapability "phantomjs.cli.args" (into-array String [(str "--webdriver-loglevel=" level)]))
-                         (.setCapability "phantomjs.ghostdriver.cli.args" (into-array String [(str "--logLevel=" level)]))))}))
+                         (.setCapability "phantomjs.cli.args" (into-array String [(str "--webdriver-loglevel=" level)
+                                                                                  (str "--webdriver-logfile=" logfile)]))
+                         (.setCapability "phantomjs.ghostdriver.cli.args" (into-array String [(str "--logLevel=" level)
+                                                                                              (str "--logFile=" logfile)]))))}))
 
 
 
@@ -94,7 +97,7 @@
 
 (defn do-on-nettime [conf op]
   (do
-    (set-driver! (init-driver (phantom-webdriver)))
+    (set-driver! (init-driver (phantom-webdriver conf)))
     (login conf)
     (let [result (op)]
       (logoff conf)
