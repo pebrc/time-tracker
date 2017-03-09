@@ -61,7 +61,7 @@
     (input-text (input "F_PId") project)
     (click (input "F_Aktual"))
     (wait-until #(exists? (input "F_KAId")))
-    (when (>= 6 hours)
+    (when (>= 5 hours)
       (de-select "input[type='checkbox'][name='F_Pausebuchen']"))
     (fill "textarea[name='F_Text']" "via time-tracker")
     (click (input "F_Speichern")))
